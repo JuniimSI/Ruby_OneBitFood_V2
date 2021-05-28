@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
@@ -6,6 +6,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>OnebBitFood - v2</title>
+        <link ref="icon" href="/favicon.icon"/>
       </Head>
 
       <main>
