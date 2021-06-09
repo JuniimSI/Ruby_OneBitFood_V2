@@ -37,3 +37,8 @@ body{
 }
 
 @media (max-width: 1025px) { .container { width: 95% !important } }
+
+.clickable-effect:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
