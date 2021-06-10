@@ -12,7 +12,7 @@ export default function Home() {
         <Link href="#">
           <Button variant="custom-red" size="lg" className="text-white">
             <FaCrosshairs className="pb-1"/>
-            <span className="px-2 fw-bolder">Encontrar Agora</span>
+            <span className="px-2 fw-bolder">Encontrar Agora!</span>
           </Button>
         </Link>
       </Col>
