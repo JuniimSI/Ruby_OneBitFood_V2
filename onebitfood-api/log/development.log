@@ -14041,3 +14041,1348 @@ Processing by ActiveStorage::DiskController#show as JPEG
 Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 177)
 
 
+Started GET "/api/categories" for ::1 at 2021-06-12 16:30:24 -0300
+Processing by CategoriesController#index as JSON
+  Rendering categories/index.json.jbuilder
+Started GET "/api/restaurants" for ::1 at 2021-06-12 16:30:24 -0300
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."title" ASC[0m
+  ↳ app/views/categories/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+Processing by RestaurantsController#index as JSON
+  ↳ app/views/categories/index.json.jbuilder:4
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 27], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.4ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 27]]
+  ↳ app/views/categories/index.json.jbuilder:4
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 27]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 53], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  ↳ app/views/categories/index.json.jbuilder:4
+  Rendered categories/index.json.jbuilder (Duration: 119.2ms | Allocations: 19420)
+Completed 200 OK in 122ms (Views: 117.8ms | ActiveRecord: 3.4ms | Allocations: 19945)
+
+
+  Rendered products/_product.json.jbuilder (Duration: 11.5ms | Allocations: 3024)
+  [1m[36mActiveStorage::Attachment Load (2.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 54], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 21.0ms | Allocations: 2255)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 54.1ms | Allocations: 9613)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 125.0ms | Allocations: 17971)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 28], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 28]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 28]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 55], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 12.4ms | Allocations: 2202)
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 8.7ms | Allocations: 2202)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 26.1ms | Allocations: 5499)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 47.4ms | Allocations: 9207)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 29], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 29]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 29]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 16.9ms | Allocations: 2202)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 12.3ms | Allocations: 2214)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 34.4ms | Allocations: 5511)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 46.3ms | Allocations: 9219)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 30], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 30]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 30]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 14.8ms | Allocations: 2202)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 10.8ms | Allocations: 2202)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 37.3ms | Allocations: 5499)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 61.2ms | Allocations: 9207)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 31], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (1.9ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 31]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 31]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 61], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 14.9ms | Allocations: 2202)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 62], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 15.4ms | Allocations: 2202)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 38.3ms | Allocations: 5508)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 66.1ms | Allocations: 9271)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 32], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 32]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 32]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 19.2ms | Allocations: 2202)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 39.2ms | Allocations: 2203)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 80.0ms | Allocations: 5500)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 102.7ms | Allocations: 9208)
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 33], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--049b5eb383e0428347c3acc29568d6417ea73f77/italian.jpeg" for 127.0.0.1 at 2021-06-12 16:30:25 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--049b5eb383e0428347c3acc29568d6417ea73f77", "filename"=>"italian"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[36m  Disk Storage (1.3ms) [0m[34mGenerated URL for file at key: hxxvjc7jb01gemz68xifp9mghijg (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhSGg0ZG1wak4ycGlNREZuWlcxNk5qaDRhV1p3T1cxbmFHbHFad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sMFlXeHBZVzR1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25hWFJoYkdsaGJpNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0xMlQxOTozNToyNS4xNzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--2294774dfe6cb700201ccef57515fbfc95a95781/italian.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22italian.jpeg%22%3B+filename%2A%3DUTF-8%27%27italian.jpeg)[0m
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--122c185dc1f627370c99eee5b02f9f7334cbf2ef/peruvian.jpg" for 127.0.0.1 at 2021-06-12 16:30:25 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--122c185dc1f627370c99eee5b02f9f7334cbf2ef", "filename"=>"peruvian"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: cm1s3gtezv1eroy0ow4s032xa7ej (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhZMjB4Y3pObmRHVjZkakZsY205NU1HOTNOSE13TXpKNFlUZGxhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CbGNuVjJhV0Z1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jR1Z5ZFhacFlXNHVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0xMlQxOTozNToyNS4xOTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c32c7bdce716e9faa873272601ff5714b7f9b446/peruvian.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22peruvian.jpg%22%3B+filename%2A%3DUTF-8%27%27peruvian.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhZMjB4Y3pObmRHVjZkakZsY205NU1HOTNOSE13TXpKNFlUZGxhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CbGNuVjJhV0Z1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jR1Z5ZFhacFlXNHVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0xMlQxOTozNToyNS4xOTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c32c7bdce716e9faa873272601ff5714b7f9b446/peruvian.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22peruvian.jpg%22%3B+filename%2A%3DUTF-8%27%27peruvian.jpg
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhSGg0ZG1wak4ycGlNREZuWlcxNk5qaDRhV1p3T1cxbmFHbHFad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sMFlXeHBZVzR1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25hWFJoYkdsaGJpNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0xMlQxOTozNToyNS4xNzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--2294774dfe6cb700201ccef57515fbfc95a95781/italian.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22italian.jpeg%22%3B+filename%2A%3DUTF-8%27%27italian.jpeg
+Completed 302 Found in 44ms (ActiveRecord: 0.3ms | Allocations: 4835)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8024c37bd1b7bd8a0782d04c9274a67dd3748b11/japonese.jpeg" for 127.0.0.1 at 2021-06-12 16:30:25 -0300
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 33]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhSGg0ZG1wak4ycGlNREZuWlcxNk5qaDRhV1p3T1cxbmFHbHFad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sMFlXeHBZVzR1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25hWFJoYkdsaGJpNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0xMlQxOTozNToyNS4xNzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--2294774dfe6cb700201ccef57515fbfc95a95781/italian.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22italian.jpeg%22%3B+filename%2A%3DUTF-8%27%27italian.jpeg" for 127.0.0.1 at 2021-06-12 16:30:25 -0300
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c05d81e97b1299985c18344514fa89f60170f3c5/mexican.jpg" for 127.0.0.1 at 2021-06-12 16:30:25 -0300
+Completed 302 Found in 13ms (ActiveRecord: 0.3ms | Allocations: 1497)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::BlobsController#show as JPEG
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 33]]
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"italian.jpeg\"; filename*=UTF-8''italian.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhSGg0ZG1wak4ycGlNREZuWlcxNk5qaDRhV1p3T1cxbmFHbHFad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sMFlXeHBZVzR1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25hWFJoYkdsaGJpNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0xMlQxOTozNToyNS4xNzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--2294774dfe6cb700201ccef57515fbfc95a95781", "filename"=>"italian"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c05d81e97b1299985c18344514fa89f60170f3c5", "filename"=>"mexican"}
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8024c37bd1b7bd8a0782d04c9274a67dd3748b11", "filename"=>"japonese"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: ijfb4sfwarfm53veuposse55k1ip (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV3BtWWpSelpuZGhjbVp0TlROMlpYVndiM056WlRVMWF6RnBjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xbGVHbGpZVzR1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZHRaWGhwWTJGdUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIxLTA2LTEyVDE5OjM1OjI1LjI3MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f04d383b29baf5c01ebbc4e5be06b656e4062d4d/mexican.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mexican.jpg%22%3B+filename%2A%3DUTF-8%27%27mexican.jpg)[0m
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 65], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[36m  Disk Storage (1.4ms) [0m[34mGenerated URL for file at key: veva93jcpn4i1ebj8bv6zsioozzj (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkbVYyWVRremFtTndialJwTVdWaWFqaGlkalo2YzJsdmIzcDZhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1waGNHOXVaWE5sTG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnBoY0c5dVpYTmxMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjUuMjgwWiIsInB1ciI6ImJsb2Jfa2V5In19--f75890b0c7d6f2e57e4f5a2f43ccf5e7c1ae328b/japonese.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22japonese.jpeg%22%3B+filename%2A%3DUTF-8%27%27japonese.jpeg)[0m
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhZMjB4Y3pObmRHVjZkakZsY205NU1HOTNOSE13TXpKNFlUZGxhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CbGNuVjJhV0Z1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jR1Z5ZFhacFlXNHVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0xMlQxOTozNToyNS4xOTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c32c7bdce716e9faa873272601ff5714b7f9b446/peruvian.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22peruvian.jpg%22%3B+filename%2A%3DUTF-8%27%27peruvian.jpg" for 127.0.0.1 at 2021-06-12 16:30:25 -0300
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV3BtWWpSelpuZGhjbVp0TlROMlpYVndiM056WlRVMWF6RnBjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xbGVHbGpZVzR1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZHRaWGhwWTJGdUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIxLTA2LTEyVDE5OjM1OjI1LjI3MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f04d383b29baf5c01ebbc4e5be06b656e4062d4d/mexican.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mexican.jpg%22%3B+filename%2A%3DUTF-8%27%27mexican.jpg
+  ↳ app/views/products/_product.json.jbuilder:5
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms | Allocations: 393)
+
+
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkbVYyWVRremFtTndialJwTVdWaWFqaGlkalo2YzJsdmIzcDZhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1waGNHOXVaWE5sTG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnBoY0c5dVpYTmxMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjUuMjgwWiIsInB1ciI6ImJsb2Jfa2V5In19--f75890b0c7d6f2e57e4f5a2f43ccf5e7c1ae328b/japonese.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22japonese.jpeg%22%3B+filename%2A%3DUTF-8%27%27japonese.jpeg
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/_product.json.jbuilder:5
+Completed 302 Found in 24ms (ActiveRecord: 0.4ms | Allocations: 4367)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Rendered products/_product.json.jbuilder (Duration: 38.8ms | Allocations: 6752)
+Completed 302 Found in 26ms (ActiveRecord: 0.3ms | Allocations: 4571)
+
+
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 66], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"peruvian.jpg\"; filename*=UTF-8''peruvian.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhZMjB4Y3pObmRHVjZkakZsY205NU1HOTNOSE13TXpKNFlUZGxhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CbGNuVjJhV0Z1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jR1Z5ZFhacFlXNHVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0xMlQxOTozNToyNS4xOTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c32c7bdce716e9faa873272601ff5714b7f9b446", "filename"=>"peruvian"}
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+Completed 200 OK in 8ms (ActiveRecord: 0.0ms | Allocations: 436)
+
+
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 23.8ms | Allocations: 2914)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 100.7ms | Allocations: 13714)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 203.7ms | Allocations: 23792)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 34], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkbVYyWVRremFtTndialJwTVdWaWFqaGlkalo2YzJsdmIzcDZhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1waGNHOXVaWE5sTG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnBoY0c5dVpYTmxMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjUuMjgwWiIsInB1ciI6ImJsb2Jfa2V5In19--f75890b0c7d6f2e57e4f5a2f43ccf5e7c1ae328b/japonese.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22japonese.jpeg%22%3B+filename%2A%3DUTF-8%27%27japonese.jpeg" for 127.0.0.1 at 2021-06-12 16:30:25 -0300
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV3BtWWpSelpuZGhjbVp0TlROMlpYVndiM056WlRVMWF6RnBjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xbGVHbGpZVzR1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZHRaWGhwWTJGdUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIxLTA2LTEyVDE5OjM1OjI1LjI3MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f04d383b29baf5c01ebbc4e5be06b656e4062d4d/mexican.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mexican.jpg%22%3B+filename%2A%3DUTF-8%27%27mexican.jpg" for 127.0.0.1 at 2021-06-12 16:30:25 -0300
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"mexican.jpg\"; filename*=UTF-8''mexican.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV3BtWWpSelpuZGhjbVp0TlROMlpYVndiM056WlRVMWF6RnBjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xbGVHbGpZVzR1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZHRaWGhwWTJGdUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIxLTA2LTEyVDE5OjM1OjI1LjI3MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f04d383b29baf5c01ebbc4e5be06b656e4062d4d", "filename"=>"mexican"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"japonese.jpeg\"; filename*=UTF-8''japonese.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkbVYyWVRremFtTndialJwTVdWaWFqaGlkalo2YzJsdmIzcDZhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1waGNHOXVaWE5sTG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnBoY0c5dVpYTmxMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjUuMjgwWiIsInB1ciI6ImJsb2Jfa2V5In19--f75890b0c7d6f2e57e4f5a2f43ccf5e7c1ae328b", "filename"=>"japonese"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 34]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 34]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 67], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 12.7ms | Allocations: 2203)
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 68], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 14.4ms | Allocations: 2203)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 41.1ms | Allocations: 5621)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 95.7ms | Allocations: 12366)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 35], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 35]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 35]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 69], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b179e65845d6121f4a3a99b7c8e6c7e707ac4dd5/vegan.jpeg" for 127.0.0.1 at 2021-06-12 16:30:25 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b179e65845d6121f4a3a99b7c8e6c7e707ac4dd5", "filename"=>"vegan"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (Duration: 15.8ms | Allocations: 2442)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 70], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+[36m  Disk Storage (1.2ms) [0m[34mGenerated URL for file at key: 4pwqteb6ray4th2r4r5z0j3n7khk (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOSEIzY1hSbFlqWnlZWGswZEdneWNqUnlOWG93YWpOdU4ydG9hd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5abFoyRnVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozWmxaMkZ1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTEyVDE5OjM1OjI1LjUwN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d2b68b12e43094a39bc8fc96bc854b5b251548bf/vegan.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22vegan.jpeg%22%3B+filename%2A%3DUTF-8%27%27vegan.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOSEIzY1hSbFlqWnlZWGswZEdneWNqUnlOWG93YWpOdU4ydG9hd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5abFoyRnVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozWmxaMkZ1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTEyVDE5OjM1OjI1LjUwN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d2b68b12e43094a39bc8fc96bc854b5b251548bf/vegan.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22vegan.jpeg%22%3B+filename%2A%3DUTF-8%27%27vegan.jpeg
+  ↳ app/views/products/_product.json.jbuilder:5
+Completed 302 Found in 21ms (ActiveRecord: 0.3ms | Allocations: 2445)
+
+
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 34.9ms | Allocations: 2809)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 85.3ms | Allocations: 8504)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 109.5ms | Allocations: 12214)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 36], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOSEIzY1hSbFlqWnlZWGswZEdneWNqUnlOWG93YWpOdU4ydG9hd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5abFoyRnVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozWmxaMkZ1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTEyVDE5OjM1OjI1LjUwN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d2b68b12e43094a39bc8fc96bc854b5b251548bf/vegan.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22vegan.jpeg%22%3B+filename%2A%3DUTF-8%27%27vegan.jpeg" for 127.0.0.1 at 2021-06-12 16:30:25 -0300
+  [1m[36mCACHE Category Load (3.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 36]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 36]]
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"vegan.jpeg\"; filename*=UTF-8''vegan.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOSEIzY1hSbFlqWnlZWGswZEdneWNqUnlOWG93YWpOdU4ydG9hd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5abFoyRnVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozWmxaMkZ1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTEyVDE5OjM1OjI1LjUwN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d2b68b12e43094a39bc8fc96bc854b5b251548bf", "filename"=>"vegan"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 71], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 13.6ms | Allocations: 2211)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 72], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 49.5ms | Allocations: 2211)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 78.6ms | Allocations: 5926)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 110.8ms | Allocations: 10367)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 37], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 37]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 37]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 73], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 8.9ms | Allocations: 1122)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 74], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 17.6ms | Allocations: 2202)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 31.6ms | Allocations: 4419)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 66.2ms | Allocations: 8180)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 38], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 38]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 38]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 75], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 10.4ms | Allocations: 2203)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 76], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 12.9ms | Allocations: 2203)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 30.1ms | Allocations: 5501)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 49.3ms | Allocations: 9264)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 39], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 39]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 39]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 14.5ms | Allocations: 889)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 47.2ms | Allocations: 4597)
+  Rendered restaurants/index.json.jbuilder (Duration: 1150.2ms | Allocations: 151296)
+Completed 200 OK in 1154ms (Views: 1106.9ms | ActiveRecord: 46.3ms | Allocations: 151774)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b102fda3b5022cc8a28a4e00a701e26897681d3d/1.jpg" for 127.0.0.1 at 2021-06-12 16:30:26 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b102fda3b5022cc8a28a4e00a701e26897681d3d", "filename"=>"1"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: 0jwzxh3d5lns3cis03zetdpa9yn7 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhNR3AzZW5ob00yUTFiRzV6TTJOcGN6QXplbVYwWkhCaE9YbHVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN4TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjYuNzUwWiIsInB1ciI6ImJsb2Jfa2V5In19--cf60a2a59d27107daa8e3f0b8ba5ce30eabe6b15/1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221.jpg%22%3B+filename%2A%3DUTF-8%27%271.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhNR3AzZW5ob00yUTFiRzV6TTJOcGN6QXplbVYwWkhCaE9YbHVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN4TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjYuNzUwWiIsInB1ciI6ImJsb2Jfa2V5In19--cf60a2a59d27107daa8e3f0b8ba5ce30eabe6b15/1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221.jpg%22%3B+filename%2A%3DUTF-8%27%271.jpg
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1497)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhNR3AzZW5ob00yUTFiRzV6TTJOcGN6QXplbVYwWkhCaE9YbHVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN4TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjYuNzUwWiIsInB1ciI6ImJsb2Jfa2V5In19--cf60a2a59d27107daa8e3f0b8ba5ce30eabe6b15/1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221.jpg%22%3B+filename%2A%3DUTF-8%27%271.jpg" for 127.0.0.1 at 2021-06-12 16:30:26 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"1.jpg\"; filename*=UTF-8''1.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhNR3AzZW5ob00yUTFiRzV6TTJOcGN6QXplbVYwWkhCaE9YbHVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN4TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjYuNzUwWiIsInB1ciI6ImJsb2Jfa2V5In19--cf60a2a59d27107daa8e3f0b8ba5ce30eabe6b15", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--abebb4fa7360c64ecda7c7abc6ee52b0b6f72858/1.jpg" for 127.0.0.1 at 2021-06-12 16:30:27 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--abebb4fa7360c64ecda7c7abc6ee52b0b6f72858", "filename"=>"1"}
+  [1m[36mActiveStorage::Blob Load (1.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[36m  Disk Storage (1.2ms) [0m[34mGenerated URL for file at key: 0piwo2t28ydnwloyq8scv3f9d43e (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhNSEJwZDI4eWRESTRlV1J1ZDJ4dmVYRTRjMk4yTTJZNVpEUXpaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN4TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjcuMzk5WiIsInB1ciI6ImJsb2Jfa2V5In19--5be8008347b3130515a909d787cf6b1e54e73fc4/1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221.jpg%22%3B+filename%2A%3DUTF-8%27%271.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhNSEJwZDI4eWRESTRlV1J1ZDJ4dmVYRTRjMk4yTTJZNVpEUXpaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN4TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjcuMzk5WiIsInB1ciI6ImJsb2Jfa2V5In19--5be8008347b3130515a909d787cf6b1e54e73fc4/1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221.jpg%22%3B+filename%2A%3DUTF-8%27%271.jpg
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms | Allocations: 1497)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhNSEJwZDI4eWRESTRlV1J1ZDJ4dmVYRTRjMk4yTTJZNVpEUXpaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN4TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjcuMzk5WiIsInB1ciI6ImJsb2Jfa2V5In19--5be8008347b3130515a909d787cf6b1e54e73fc4/1.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221.jpg%22%3B+filename%2A%3DUTF-8%27%271.jpg" for 127.0.0.1 at 2021-06-12 16:30:27 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"1.jpg\"; filename*=UTF-8''1.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhNSEJwZDI4eWRESTRlV1J1ZDJ4dmVYRTRjMk4yTTJZNVpEUXpaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN4TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjcuMzk5WiIsInB1ciI6ImJsb2Jfa2V5In19--5be8008347b3130515a909d787cf6b1e54e73fc4", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/api/restaurants?category=mexicana" for ::1 at 2021-06-12 16:30:28 -0300
+Processing by RestaurantsController#index as JSON
+  Parameters: {"category"=>"mexicana"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:29:in `filter_by_category'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 27], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 27]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 27]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 53], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 8.2ms | Allocations: 2199)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 54], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 10.1ms | Allocations: 2198)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 21.4ms | Allocations: 5491)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 32.6ms | Allocations: 8513)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 28], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 28]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 28]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 55], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 6.6ms | Allocations: 2198)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 8.2ms | Allocations: 2198)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 17.8ms | Allocations: 5489)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 38.7ms | Allocations: 8501)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 29], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 29]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 29]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 8.0ms | Allocations: 2198)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 8.6ms | Allocations: 2210)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 21.2ms | Allocations: 5501)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 32.4ms | Allocations: 8511)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 30], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.1ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 30]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 30]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 7.7ms | Allocations: 2198)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 8.3ms | Allocations: 2198)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 22.2ms | Allocations: 5489)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 32.1ms | Allocations: 8498)
+  Rendered restaurants/index.json.jbuilder (Duration: 141.7ms | Allocations: 35628)
+Completed 200 OK in 173ms (Views: 134.2ms | ActiveRecord: 10.9ms | Allocations: 45076)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a6d14bc290f506a4df7701b5e39eda34fb214fca/2.jpg" for 127.0.0.1 at 2021-06-12 16:30:29 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a6d14bc290f506a4df7701b5e39eda34fb214fca", "filename"=>"2"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[36m  Disk Storage (6.7ms) [0m[34mGenerated URL for file at key: c3bnb691e00ovzi76hu9tnpz9t0j (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhZek5pYm1JMk9URmxNREJ2ZG5wcE56Wm9kVGwwYm5CNk9YUXdhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjkuMjU2WiIsInB1ciI6ImJsb2Jfa2V5In19--bf0202dcba3da718e32cde13b3d888cbafa97db9/2.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%222.jpg%22%3B+filename%2A%3DUTF-8%27%272.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhZek5pYm1JMk9URmxNREJ2ZG5wcE56Wm9kVGwwYm5CNk9YUXdhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjkuMjU2WiIsInB1ciI6ImJsb2Jfa2V5In19--bf0202dcba3da718e32cde13b3d888cbafa97db9/2.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%222.jpg%22%3B+filename%2A%3DUTF-8%27%272.jpg
+Completed 302 Found in 19ms (ActiveRecord: 0.4ms | Allocations: 1498)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhZek5pYm1JMk9URmxNREJ2ZG5wcE56Wm9kVGwwYm5CNk9YUXdhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjkuMjU2WiIsInB1ciI6ImJsb2Jfa2V5In19--bf0202dcba3da718e32cde13b3d888cbafa97db9/2.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%222.jpg%22%3B+filename%2A%3DUTF-8%27%272.jpg" for 127.0.0.1 at 2021-06-12 16:30:29 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"2.jpg\"; filename*=UTF-8''2.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhZek5pYm1JMk9URmxNREJ2ZG5wcE56Wm9kVGwwYm5CNk9YUXdhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjkuMjU2WiIsInB1ciI6ImJsb2Jfa2V5In19--bf0202dcba3da718e32cde13b3d888cbafa97db9", "filename"=>"2"}
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4f854eec043298e51ed1870a55eda154ed14fe39/2.jpg" for 127.0.0.1 at 2021-06-12 16:30:29 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4f854eec043298e51ed1870a55eda154ed14fe39", "filename"=>"2"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: k33p5vo17z3o2942d53mh7uvp4o1 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhek16Y0RWMmJ6RTNlak52TWprME1tUTFNMjFvTjNWMmNEUnZNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjkuNjAzWiIsInB1ciI6ImJsb2Jfa2V5In19--3f92b872eaddecdac599b297c70bd249ec260065/2.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%222.jpg%22%3B+filename%2A%3DUTF-8%27%272.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhek16Y0RWMmJ6RTNlak52TWprME1tUTFNMjFvTjNWMmNEUnZNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjkuNjAzWiIsInB1ciI6ImJsb2Jfa2V5In19--3f92b872eaddecdac599b297c70bd249ec260065/2.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%222.jpg%22%3B+filename%2A%3DUTF-8%27%272.jpg
+Completed 302 Found in 12ms (ActiveRecord: 0.3ms | Allocations: 1497)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhek16Y0RWMmJ6RTNlak52TWprME1tUTFNMjFvTjNWMmNEUnZNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjkuNjAzWiIsInB1ciI6ImJsb2Jfa2V5In19--3f92b872eaddecdac599b297c70bd249ec260065/2.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%222.jpg%22%3B+filename%2A%3DUTF-8%27%272.jpg" for 127.0.0.1 at 2021-06-12 16:30:29 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"2.jpg\"; filename*=UTF-8''2.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhek16Y0RWMmJ6RTNlak52TWprME1tUTFNMjFvTjNWMmNEUnZNUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MjkuNjAzWiIsInB1ciI6ImJsb2Jfa2V5In19--3f92b872eaddecdac599b297c70bd249ec260065", "filename"=>"2"}
+Completed 200 OK in 6ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9d077f138ec8f658f4cff5a56d5ac66967e769b2/3.jpg" for 127.0.0.1 at 2021-06-12 16:30:31 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9d077f138ec8f658f4cff5a56d5ac66967e769b2", "filename"=>"3"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+[36m  Disk Storage (1.8ms) [0m[34mGenerated URL for file at key: jids97plz391lp89skokrkdh1l6m (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhbWxrY3prM2NHeDZNemt4YkhBNE9YTnJiMnR5YTJSb01XdzJiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzEuMTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--80ca81b284f8d580eabff5806b0992e4c38d618b/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhbWxrY3prM2NHeDZNemt4YkhBNE9YTnJiMnR5YTJSb01XdzJiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzEuMTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--80ca81b284f8d580eabff5806b0992e4c38d618b/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg
+Completed 302 Found in 17ms (ActiveRecord: 0.4ms | Allocations: 1497)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhbWxrY3prM2NHeDZNemt4YkhBNE9YTnJiMnR5YTJSb01XdzJiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzEuMTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--80ca81b284f8d580eabff5806b0992e4c38d618b/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg" for 127.0.0.1 at 2021-06-12 16:30:31 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"3.jpg\"; filename*=UTF-8''3.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhbWxrY3prM2NHeDZNemt4YkhBNE9YTnJiMnR5YTJSb01XdzJiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzEuMTg3WiIsInB1ciI6ImJsb2Jfa2V5In19--80ca81b284f8d580eabff5806b0992e4c38d618b", "filename"=>"3"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--74e3f5705e58dde74ec2e7c6298baf19b336234d/3.jpg" for 127.0.0.1 at 2021-06-12 16:30:31 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--74e3f5705e58dde74ec2e7c6298baf19b336234d", "filename"=>"3"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: ri2gpczlginu59lh198o648759h4 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzEuNTM1WiIsInB1ciI6ImJsb2Jfa2V5In19--b90576ffd123bb3b963685df82d34de6d5261fe7/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzEuNTM1WiIsInB1ciI6ImJsb2Jfa2V5In19--b90576ffd123bb3b963685df82d34de6d5261fe7/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg
+Completed 302 Found in 14ms (ActiveRecord: 0.5ms | Allocations: 1496)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzEuNTM1WiIsInB1ciI6ImJsb2Jfa2V5In19--b90576ffd123bb3b963685df82d34de6d5261fe7/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg" for 127.0.0.1 at 2021-06-12 16:30:31 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"3.jpg\"; filename*=UTF-8''3.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzEuNTM1WiIsInB1ciI6ImJsb2Jfa2V5In19--b90576ffd123bb3b963685df82d34de6d5261fe7", "filename"=>"3"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/api/restaurants?category=italiana" for ::1 at 2021-06-12 16:30:33 -0300
+Processing by RestaurantsController#index as JSON
+  Parameters: {"category"=>"italiana"}
+  [1m[36mRestaurant Load (1.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:29:in `filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 31], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (1.1ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 31]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 31]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 61], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 13.0ms | Allocations: 2199)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 62], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 9.4ms | Allocations: 2198)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 27.8ms | Allocations: 5491)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 82.4ms | Allocations: 8516)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 32], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 32]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 32]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 8.5ms | Allocations: 2198)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 9.2ms | Allocations: 2198)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 26.8ms | Allocations: 5489)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 44.2ms | Allocations: 8498)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 33], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 33]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 33]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 65], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 9.8ms | Allocations: 2199)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 66], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 7.6ms | Allocations: 2211)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 22.7ms | Allocations: 5503)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 36.9ms | Allocations: 8512)
+  Rendered restaurants/index.json.jbuilder (Duration: 170.7ms | Allocations: 26737)
+Completed 200 OK in 248ms (Views: 164.8ms | ActiveRecord: 9.8ms | Allocations: 36183)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--26644303cf9f29467d03ddf357da3682b074211c/4.jpg" for 127.0.0.1 at 2021-06-12 16:30:34 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--26644303cf9f29467d03ddf357da3682b074211c", "filename"=>"4"}
+  [1m[36mActiveStorage::Blob Load (1.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: tlkgsjxzjpx29wltm9sk4ua37usq (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkR3hyWjNOcWVIcHFjSGd5T1hkc2RHMDVjMnMwZFdFek4zVnpjUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpRdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMwTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzQuMjU0WiIsInB1ciI6ImJsb2Jfa2V5In19--2bb16d6c0110c68d4a2f98b94034c685148ee169/4.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%224.jpg%22%3B+filename%2A%3DUTF-8%27%274.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkR3hyWjNOcWVIcHFjSGd5T1hkc2RHMDVjMnMwZFdFek4zVnpjUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpRdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMwTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzQuMjU0WiIsInB1ciI6ImJsb2Jfa2V5In19--2bb16d6c0110c68d4a2f98b94034c685148ee169/4.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%224.jpg%22%3B+filename%2A%3DUTF-8%27%274.jpg
+Completed 302 Found in 10ms (ActiveRecord: 1.6ms | Allocations: 1498)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkR3hyWjNOcWVIcHFjSGd5T1hkc2RHMDVjMnMwZFdFek4zVnpjUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpRdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMwTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzQuMjU0WiIsInB1ciI6ImJsb2Jfa2V5In19--2bb16d6c0110c68d4a2f98b94034c685148ee169/4.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%224.jpg%22%3B+filename%2A%3DUTF-8%27%274.jpg" for 127.0.0.1 at 2021-06-12 16:30:34 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"4.jpg\"; filename*=UTF-8''4.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkR3hyWjNOcWVIcHFjSGd5T1hkc2RHMDVjMnMwZFdFek4zVnpjUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpRdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMwTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzQuMjU0WiIsInB1ciI6ImJsb2Jfa2V5In19--2bb16d6c0110c68d4a2f98b94034c685148ee169", "filename"=>"4"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/api/restaurants?category=vegana" for ::1 at 2021-06-12 16:30:36 -0300
+Processing by RestaurantsController#index as JSON
+  Parameters: {"category"=>"vegana"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:29:in `filter_by_category'
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 38], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.7ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 38]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 38]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 75], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 5.2ms | Allocations: 2200)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 76], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 10.0ms | Allocations: 2199)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 18.8ms | Allocations: 5493)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 31.3ms | Allocations: 8515)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 39], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.1ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 39]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 39]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 1.5ms | Allocations: 887)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 7.8ms | Allocations: 3896)
+  Rendered restaurants/index.json.jbuilder (Duration: 40.3ms | Allocations: 13094)
+Completed 200 OK in 81ms (Views: 38.6ms | ActiveRecord: 5.9ms | Allocations: 22539)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f2d555a6456c0c5a150063112d9180e88d16a4f/7.jpg" for 127.0.0.1 at 2021-06-12 16:30:36 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f2d555a6456c0c5a150063112d9180e88d16a4f", "filename"=>"7"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+[36m  Disk Storage (1.6ms) [0m[34mGenerated URL for file at key: 27q7ohkq9clvt5c2si8y1yekhk43 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhNamR4TjI5b2EzRTVZMngyZERWak1uTnBPSGt4ZVdWcmFHczBNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMzTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzYuODg4WiIsInB1ciI6ImJsb2Jfa2V5In19--a19ae0562ac6748d06501c1f3256efb740bb5899/7.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%227.jpg%22%3B+filename%2A%3DUTF-8%27%277.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhNamR4TjI5b2EzRTVZMngyZERWak1uTnBPSGt4ZVdWcmFHczBNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMzTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzYuODg4WiIsInB1ciI6ImJsb2Jfa2V5In19--a19ae0562ac6748d06501c1f3256efb740bb5899/7.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%227.jpg%22%3B+filename%2A%3DUTF-8%27%277.jpg
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5c166b58280e58c68cf29a18ffb91cc0e5c77c33/8.jpg" for 127.0.0.1 at 2021-06-12 16:30:36 -0300
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms | Allocations: 1769)
+
+
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5c166b58280e58c68cf29a18ffb91cc0e5c77c33", "filename"=>"8"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: tth754erc6g4bjdo2xm3u7tif32e (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkSFJvTnpVMFpYSmpObWMwWW1wa2J6SjRiVE4xTjNScFpqTXlaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpndWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM0TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzYuOTAxWiIsInB1ciI6ImJsb2Jfa2V5In19--cfa6878e0df22a384b30b78818f369ae406f7dfc/8.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%228.jpg%22%3B+filename%2A%3DUTF-8%27%278.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkSFJvTnpVMFpYSmpObWMwWW1wa2J6SjRiVE4xTjNScFpqTXlaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpndWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM0TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzYuOTAxWiIsInB1ciI6ImJsb2Jfa2V5In19--cfa6878e0df22a384b30b78818f369ae406f7dfc/8.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%228.jpg%22%3B+filename%2A%3DUTF-8%27%278.jpg
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 1497)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhNamR4TjI5b2EzRTVZMngyZERWak1uTnBPSGt4ZVdWcmFHczBNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMzTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzYuODg4WiIsInB1ciI6ImJsb2Jfa2V5In19--a19ae0562ac6748d06501c1f3256efb740bb5899/7.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%227.jpg%22%3B+filename%2A%3DUTF-8%27%277.jpg" for 127.0.0.1 at 2021-06-12 16:30:36 -0300
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkSFJvTnpVMFpYSmpObWMwWW1wa2J6SjRiVE4xTjNScFpqTXlaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpndWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM0TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzYuOTAxWiIsInB1ciI6ImJsb2Jfa2V5In19--cfa6878e0df22a384b30b78818f369ae406f7dfc/8.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%228.jpg%22%3B+filename%2A%3DUTF-8%27%278.jpg" for 127.0.0.1 at 2021-06-12 16:30:36 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"7.jpg\"; filename*=UTF-8''7.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhNamR4TjI5b2EzRTVZMngyZERWak1uTnBPSGt4ZVdWcmFHczBNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMzTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzYuODg4WiIsInB1ciI6ImJsb2Jfa2V5In19--a19ae0562ac6748d06501c1f3256efb740bb5899", "filename"=>"7"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"8.jpg\"; filename*=UTF-8''8.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkSFJvTnpVMFpYSmpObWMwWW1wa2J6SjRiVE4xTjNScFpqTXlaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpndWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM0TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6MzYuOTAxWiIsInB1ciI6ImJsb2Jfa2V5In19--cfa6878e0df22a384b30b78818f369ae406f7dfc", "filename"=>"8"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 344)
+
+
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 212)
+
+
+Started GET "/api/restaurants?category=peruana" for ::1 at 2021-06-12 16:30:37 -0300
+Processing by RestaurantsController#index as JSON
+  Parameters: {"category"=>"peruana"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:29:in `filter_by_category'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  Rendering restaurants/index.json.jbuilder
+  Rendered restaurants/index.json.jbuilder (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 51ms (Views: 0.9ms | ActiveRecord: 1.8ms | Allocations: 9466)
+
+
+Started GET "/api/restaurants?category=mexicana" for ::1 at 2021-06-12 16:30:39 -0300
+Processing by RestaurantsController#index as JSON
+  Parameters: {"category"=>"mexicana"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:29:in `filter_by_category'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 27], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 27]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 27]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 53], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 14.4ms | Allocations: 2199)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 54], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 18.7ms | Allocations: 2198)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 41.7ms | Allocations: 5491)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 59.1ms | Allocations: 8514)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 28], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 28]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 28]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 55], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 12.2ms | Allocations: 2198)
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 13.3ms | Allocations: 2198)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 37.6ms | Allocations: 5489)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 60.0ms | Allocations: 8498)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 29], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 29]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 29]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 15.3ms | Allocations: 2198)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 25.0ms | Allocations: 2210)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 50.1ms | Allocations: 5501)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 69.9ms | Allocations: 8510)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 30], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.4ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 30]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 30]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 16.6ms | Allocations: 2198)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 16.8ms | Allocations: 2198)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 48.0ms | Allocations: 5489)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 69.6ms | Allocations: 8498)
+  Rendered restaurants/index.json.jbuilder (Duration: 262.0ms | Allocations: 35625)
+Completed 200 OK in 310ms (Views: 250.9ms | ActiveRecord: 13.7ms | Allocations: 45074)
+
+
+Started GET "/api/restaurants?category=mexicana" for ::1 at 2021-06-12 16:30:42 -0300
+Processing by RestaurantsController#index as JSON
+  Parameters: {"category"=>"mexicana"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:29:in `filter_by_category'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 27], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 27]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 27]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 53], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 4.5ms | Allocations: 2199)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 54], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 6.3ms | Allocations: 2198)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 13.9ms | Allocations: 5491)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 22.4ms | Allocations: 8513)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 28], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.1ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 28]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 28]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 55], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 7.1ms | Allocations: 2198)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 56], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 8.1ms | Allocations: 2198)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 18.0ms | Allocations: 5489)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 24.7ms | Allocations: 8498)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 29], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 29]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 29]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 57], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 4.2ms | Allocations: 2198)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 58], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 5.4ms | Allocations: 2210)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 12.3ms | Allocations: 5501)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 29.6ms | Allocations: 8513)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 30], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.1ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 30]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 30]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 59], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 5.3ms | Allocations: 2198)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 60], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 4.9ms | Allocations: 2198)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 12.2ms | Allocations: 5489)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 18.8ms | Allocations: 8498)
+  Rendered restaurants/index.json.jbuilder (Duration: 97.8ms | Allocations: 35627)
+Completed 200 OK in 130ms (Views: 93.1ms | ActiveRecord: 7.2ms | Allocations: 45074)
+
+
+Started GET "/api/restaurants?category=japonesa" for ::1 at 2021-06-12 16:30:43 -0300
+Processing by RestaurantsController#index as JSON
+  Parameters: {"category"=>"japonesa"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:29:in `filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 34], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 34]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 34]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 67], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 7.7ms | Allocations: 2200)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 68], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 8.0ms | Allocations: 2199)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 18.0ms | Allocations: 5493)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 27.2ms | Allocations: 8516)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 35], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 35]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 35]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 69], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 6.9ms | Allocations: 2199)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 70], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 4.2ms | Allocations: 2199)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 13.5ms | Allocations: 5491)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 27.6ms | Allocations: 8500)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 36], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.1ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 36]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 36]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 71], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 7.7ms | Allocations: 2199)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 72], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 4.5ms | Allocations: 2210)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 14.0ms | Allocations: 5502)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 19.1ms | Allocations: 8511)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 37], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 37]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 37]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 73], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 3.4ms | Allocations: 1120)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 74], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 10.0ms | Allocations: 2198)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 17.3ms | Allocations: 4411)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 29.4ms | Allocations: 7420)
+  Rendered restaurants/index.json.jbuilder (Duration: 105.6ms | Allocations: 34544)
+Completed 200 OK in 136ms (Views: 100.1ms | ActiveRecord: 8.0ms | Allocations: 43990)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8e646e3b849994719162216b25783718e8418dcb/5.jpg" for 127.0.0.1 at 2021-06-12 16:30:43 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8e646e3b849994719162216b25783718e8418dcb", "filename"=>"5"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: 5vjicmkr3nfse9nt7kvm91owsn2g (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOWFpxYVdOdGEzSXpibVp6WlRsdWREZHJkbTA1TVc5M2MyNHlad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6NDMuNzA2WiIsInB1ciI6ImJsb2Jfa2V5In19--c7ba9aa8f757f580754b152d3e5c5c02dd878744/5.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%225.jpg%22%3B+filename%2A%3DUTF-8%27%275.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOWFpxYVdOdGEzSXpibVp6WlRsdWREZHJkbTA1TVc5M2MyNHlad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6NDMuNzA2WiIsInB1ciI6ImJsb2Jfa2V5In19--c7ba9aa8f757f580754b152d3e5c5c02dd878744/5.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%225.jpg%22%3B+filename%2A%3DUTF-8%27%275.jpg
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1497)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dca731a9276405ab3bff47b1861075e8207f8d80/6.jpg" for 127.0.0.1 at 2021-06-12 16:30:43 -0300
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d66447237eba6f8f6962fcf5ce27ad4915fa7f7/6.jpg" for 127.0.0.1 at 2021-06-12 16:30:43 -0300
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dd3c567f5d78ca2063fcbe1bbf47a4cafc2aa9e4/5.jpg" for 127.0.0.1 at 2021-06-12 16:30:43 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOWFpxYVdOdGEzSXpibVp6WlRsdWREZHJkbTA1TVc5M2MyNHlad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6NDMuNzA2WiIsInB1ciI6ImJsb2Jfa2V5In19--c7ba9aa8f757f580754b152d3e5c5c02dd878744/5.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%225.jpg%22%3B+filename%2A%3DUTF-8%27%275.jpg" for 127.0.0.1 at 2021-06-12 16:30:43 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d66447237eba6f8f6962fcf5ce27ad4915fa7f7", "filename"=>"6"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dca731a9276405ab3bff47b1861075e8207f8d80", "filename"=>"6"}
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: x5mf4ixd5vlaqwg2tkw9rlyysoum (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhlRFZ0WmpScGVHUTFkbXhoY1hkbk1uUnJkemx5YkhsNWMyOTFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6NDMuNzI2WiIsInB1ciI6ImJsb2Jfa2V5In19--7ca175ed838232e9a6e440c31bbf29d507956ad3/6.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%226.jpg%22%3B+filename%2A%3DUTF-8%27%276.jpg)[0m
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::BlobsController#show as JPEG
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhlRFZ0WmpScGVHUTFkbXhoY1hkbk1uUnJkemx5YkhsNWMyOTFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6NDMuNzI2WiIsInB1ciI6ImJsb2Jfa2V5In19--7ca175ed838232e9a6e440c31bbf29d507956ad3/6.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%226.jpg%22%3B+filename%2A%3DUTF-8%27%276.jpg
+Completed 302 Found in 21ms (ActiveRecord: 0.1ms | Allocations: 3659)
+
+
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"5.jpg\"; filename*=UTF-8''5.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOWFpxYVdOdGEzSXpibVp6WlRsdWREZHJkbTA1TVc5M2MyNHlad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6NDMuNzA2WiIsInB1ciI6ImJsb2Jfa2V5In19--c7ba9aa8f757f580754b152d3e5c5c02dd878744", "filename"=>"5"}
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: fucufsp564ngtn0tdbyzke1tzbk5 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhablZqZFdaemNEVTJORzVuZEc0d2RHUmllWHByWlRGMGVtSnJOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6NDMuNzQzWiIsInB1ciI6ImJsb2Jfa2V5In19--15b71c11773e55a434e56820a5ee69237e29469e/6.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%226.jpg%22%3B+filename%2A%3DUTF-8%27%276.jpg)[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 197)
+
+
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dd3c567f5d78ca2063fcbe1bbf47a4cafc2aa9e4", "filename"=>"5"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhablZqZFdaemNEVTJORzVuZEc0d2RHUmllWHByWlRGMGVtSnJOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6NDMuNzQzWiIsInB1ciI6ImJsb2Jfa2V5In19--15b71c11773e55a434e56820a5ee69237e29469e/6.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%226.jpg%22%3B+filename%2A%3DUTF-8%27%276.jpg
+Completed 302 Found in 31ms (ActiveRecord: 0.2ms | Allocations: 4000)
+
+
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: 4dy7lxifjcifasgbmewmccc2xq4o (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOR1I1TjJ4NGFXWnFZMmxtWVhOblltMWxkMjFqWTJNeWVIRTBid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6NDMuNzU3WiIsInB1ciI6ImJsb2Jfa2V5In19--7d8f8c003ad2e31655db50e4274f3da0bda6b613/5.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%225.jpg%22%3B+filename%2A%3DUTF-8%27%275.jpg)[0m
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhlRFZ0WmpScGVHUTFkbXhoY1hkbk1uUnJkemx5YkhsNWMyOTFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6NDMuNzI2WiIsInB1ciI6ImJsb2Jfa2V5In19--7ca175ed838232e9a6e440c31bbf29d507956ad3/6.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%226.jpg%22%3B+filename%2A%3DUTF-8%27%276.jpg" for 127.0.0.1 at 2021-06-12 16:30:43 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOR1I1TjJ4NGFXWnFZMmxtWVhOblltMWxkMjFqWTJNeWVIRTBid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6NDMuNzU3WiIsInB1ciI6ImJsb2Jfa2V5In19--7d8f8c003ad2e31655db50e4274f3da0bda6b613/5.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%225.jpg%22%3B+filename%2A%3DUTF-8%27%275.jpg
+Completed 302 Found in 13ms (ActiveRecord: 0.1ms | Allocations: 2849)
+
+
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"6.jpg\"; filename*=UTF-8''6.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhlRFZ0WmpScGVHUTFkbXhoY1hkbk1uUnJkemx5YkhsNWMyOTFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6NDMuNzI2WiIsInB1ciI6ImJsb2Jfa2V5In19--7ca175ed838232e9a6e440c31bbf29d507956ad3", "filename"=>"6"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhablZqZFdaemNEVTJORzVuZEc0d2RHUmllWHByWlRGMGVtSnJOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6NDMuNzQzWiIsInB1ciI6ImJsb2Jfa2V5In19--15b71c11773e55a434e56820a5ee69237e29469e/6.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%226.jpg%22%3B+filename%2A%3DUTF-8%27%276.jpg" for 127.0.0.1 at 2021-06-12 16:30:43 -0300
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 235)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOR1I1TjJ4NGFXWnFZMmxtWVhOblltMWxkMjFqWTJNeWVIRTBid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6NDMuNzU3WiIsInB1ciI6ImJsb2Jfa2V5In19--7d8f8c003ad2e31655db50e4274f3da0bda6b613/5.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%225.jpg%22%3B+filename%2A%3DUTF-8%27%275.jpg" for 127.0.0.1 at 2021-06-12 16:30:43 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"6.jpg\"; filename*=UTF-8''6.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhablZqZFdaemNEVTJORzVuZEc0d2RHUmllWHByWlRGMGVtSnJOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6NDMuNzQzWiIsInB1ciI6ImJsb2Jfa2V5In19--15b71c11773e55a434e56820a5ee69237e29469e", "filename"=>"6"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 206)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"5.jpg\"; filename*=UTF-8''5.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOR1I1TjJ4NGFXWnFZMmxtWVhOblltMWxkMjFqWTJNeWVIRTBid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMTJUMTk6MzU6NDMuNzU3WiIsInB1ciI6ImJsb2Jfa2V5In19--7d8f8c003ad2e31655db50e4274f3da0bda6b613", "filename"=>"5"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/api/restaurants?category=peruana" for ::1 at 2021-06-12 16:30:43 -0300
+Processing by RestaurantsController#index as JSON
+  Parameters: {"category"=>"peruana"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:29:in `filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  Rendering restaurants/index.json.jbuilder
+  Rendered restaurants/index.json.jbuilder (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 22ms (Views: 1.2ms | ActiveRecord: 1.3ms | Allocations: 9512)
+
+
+Started GET "/api/restaurants?category=vegana" for ::1 at 2021-06-12 16:30:44 -0300
+Processing by RestaurantsController#index as JSON
+  Parameters: {"category"=>"vegana"}
+  [1m[36mRestaurant Load (1.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:29:in `filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 38], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.4ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 38]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 38]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 75], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 7.7ms | Allocations: 2200)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 76], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 5.7ms | Allocations: 2199)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 20.6ms | Allocations: 5512)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 34.0ms | Allocations: 8587)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 39], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 39]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 39]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 2.6ms | Allocations: 887)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 14.0ms | Allocations: 3897)
+  Rendered restaurants/index.json.jbuilder (Duration: 49.7ms | Allocations: 13167)
+Completed 200 OK in 107ms (Views: 46.9ms | ActiveRecord: 7.2ms | Allocations: 22613)
+
+
