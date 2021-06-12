@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 export default function Header() {
     return(
-        <Navbar bg="white" expand="lg" className="border-bottom border-custom-gray clickable-effect">
-            <Navbar.Brand className="mx-4">
+        <Navbar bg="white" expand="lg" className="border-bottom border-custom-gray">
+            <Navbar.Brand className="mx-4 mt-1 clickable-effect">
             <Link href="/restaurants">
             <a>
                 <Image
