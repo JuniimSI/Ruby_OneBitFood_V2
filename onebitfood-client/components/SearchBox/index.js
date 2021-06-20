@@ -13,7 +13,7 @@ export default function SearchBox() {
 }
 
  return (
-   <Form className='d-flex mx-5 my-2' onSubmit={(e) => Search(e)}>
+   <Form className='d-flex mx-4 my-2' onSubmit={(e) => Search(e)}>
      <Form.Control
        type="text"
        placeholder="Buscar Restaurantes..."
