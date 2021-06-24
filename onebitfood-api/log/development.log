@@ -25616,3 +25616,894 @@ Processing by RestaurantsController#index as JSON
 Completed 200 OK in 79ms (Views: 51.9ms | ActiveRecord: 4.4ms | Allocations: 11832)
 
 
+Started GET "/api/restaurants?city=Maceio" for ::1 at 2021-06-20 11:13:09 -0300
+Started GET "/api/categories" for ::1 at 2021-06-20 11:13:09 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#index as JSON
+Processing by RestaurantsController#index as JSON
+  Rendering categories/index.json.jbuilder
+  Parameters: {"city"=>"Maceio"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."title" ASC[0m
+  Rendering restaurants/index.json.jbuilder
+  ↳ app/views/categories/index.json.jbuilder:1
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."city" = ?[0m  [["city", "Maceio"]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 32], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mCategory Load (8.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mProductCategory Load (0.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 32]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/index.json.jbuilder:4
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 32]]
+  ↳ app/views/categories/index.json.jbuilder:4
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (Duration: 11.1ms | Allocations: 4341)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/index.json.jbuilder:4
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered categories/index.json.jbuilder (Duration: 76.9ms | Allocations: 20618)
+  ↳ app/views/products/_product.json.jbuilder:5
+Completed 200 OK in 81ms (Views: 76.6ms | ActiveRecord: 2.3ms | Allocations: 21499)
+
+
+  Rendered products/_product.json.jbuilder (Duration: 6.8ms | Allocations: 2718)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 28.1ms | Allocations: 10585)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 66.5ms | Allocations: 18896)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 35], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 35]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 35]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 69], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 4.4ms | Allocations: 2203)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 70], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 4.7ms | Allocations: 2203)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 11.5ms | Allocations: 5501)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 23.9ms | Allocations: 9264)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 37], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.1ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 37]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 37]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 73], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 2.3ms | Allocations: 1122)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 74], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 6.1ms | Allocations: 2210)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 11.2ms | Allocations: 4427)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 20.2ms | Allocations: 8135)
+  Rendered restaurants/index.json.jbuilder (Duration: 119.3ms | Allocations: 39265)
+Completed 200 OK in 124ms (Views: 110.1ms | ActiveRecord: 13.2ms | Allocations: 40045)
+
+
+Started GET "/api/restaurants?category=italiana&city=Maceio" for ::1 at 2021-06-20 11:13:09 -0300
+Processing by RestaurantsController#index as JSON
+  Parameters: {"category"=>"italiana", "city"=>"Maceio"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."city" = ?[0m  [["city", "Maceio"]]
+  ↳ app/controllers/restaurants_controller.rb:29:in `filter_by_category'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--049b5eb383e0428347c3acc29568d6417ea73f77/italian.jpeg" for 127.0.0.1 at 2021-06-20 11:13:09 -0300
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 32], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+Processing by ActiveStorage::BlobsController#show as JPEG
+  [1m[36mProductCategory Load (0.3ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 32]]
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--049b5eb383e0428347c3acc29568d6417ea73f77", "filename"=>"italian"}
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[36m  Disk Storage (1.3ms) [0m[34mGenerated URL for file at key: hxxvjc7jb01gemz68xifp9mghijg (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhSGg0ZG1wak4ycGlNREZuWlcxNk5qaDRhV1p3T1cxbmFHbHFad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sMFlXeHBZVzR1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25hWFJoYkdsaGJpNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0yMFQxNDoxODowOS43NjVaIiwicHVyIjoiYmxvYl9rZXkifX0=--365d437cfde4fee95468570c1ebd0c2921021b15/italian.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22italian.jpeg%22%3B+filename%2A%3DUTF-8%27%27italian.jpeg)[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 32]]
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhSGg0ZG1wak4ycGlNREZuWlcxNk5qaDRhV1p3T1cxbmFHbHFad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sMFlXeHBZVzR1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25hWFJoYkdsaGJpNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0yMFQxNDoxODowOS43NjVaIiwicHVyIjoiYmxvYl9rZXkifX0=--365d437cfde4fee95468570c1ebd0c2921021b15/italian.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22italian.jpeg%22%3B+filename%2A%3DUTF-8%27%27italian.jpeg
+Completed 302 Found in 12ms (ActiveRecord: 0.3ms | Allocations: 2458)
+
+
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 7.4ms | Allocations: 2199)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhSGg0ZG1wak4ycGlNREZuWlcxNk5qaDRhV1p3T1cxbmFHbHFad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sMFlXeHBZVzR1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25hWFJoYkdsaGJpNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0yMFQxNDoxODowOS43NjVaIiwicHVyIjoiYmxvYl9rZXkifX0=--365d437cfde4fee95468570c1ebd0c2921021b15/italian.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22italian.jpeg%22%3B+filename%2A%3DUTF-8%27%27italian.jpeg" for 127.0.0.1 at 2021-06-20 11:13:09 -0300
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 9.8ms | Allocations: 2532)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 28.3ms | Allocations: 6147)
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"italian.jpeg\"; filename*=UTF-8''italian.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhSGg0ZG1wak4ycGlNREZuWlcxNk5qaDRhV1p3T1cxbmFHbHFad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sMFlXeHBZVzR1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25hWFJoYkdsaGJpNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0yMFQxNDoxODowOS43NjVaIiwicHVyIjoiYmxvYl9rZXkifX0=--365d437cfde4fee95468570c1ebd0c2921021b15", "filename"=>"italian"}
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 53.7ms | Allocations: 11951)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 189)
+
+
+  Rendered restaurants/index.json.jbuilder (Duration: 57.8ms | Allocations: 12594)
+Completed 200 OK in 82ms (Views: 58.7ms | ActiveRecord: 2.8ms | Allocations: 15957)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8024c37bd1b7bd8a0782d04c9274a67dd3748b11/japonese.jpeg" for 127.0.0.1 at 2021-06-20 11:13:09 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8024c37bd1b7bd8a0782d04c9274a67dd3748b11", "filename"=>"japonese"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[36m  Disk Storage (1.1ms) [0m[34mGenerated URL for file at key: veva93jcpn4i1ebj8bv6zsioozzj (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkbVYyWVRremFtTndialJwTVdWaWFqaGlkalo2YzJsdmIzcDZhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1waGNHOXVaWE5sTG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnBoY0c5dVpYTmxMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MTg6MDkuODU3WiIsInB1ciI6ImJsb2Jfa2V5In19--8fa9c453a72b7bfdd364d974d745cbeaffcd9afa/japonese.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22japonese.jpeg%22%3B+filename%2A%3DUTF-8%27%27japonese.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkbVYyWVRremFtTndialJwTVdWaWFqaGlkalo2YzJsdmIzcDZhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1waGNHOXVaWE5sTG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnBoY0c5dVpYTmxMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MTg6MDkuODU3WiIsInB1ciI6ImJsb2Jfa2V5In19--8fa9c453a72b7bfdd364d974d745cbeaffcd9afa/japonese.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22japonese.jpeg%22%3B+filename%2A%3DUTF-8%27%27japonese.jpeg
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms | Allocations: 1498)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkbVYyWVRremFtTndialJwTVdWaWFqaGlkalo2YzJsdmIzcDZhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1waGNHOXVaWE5sTG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnBoY0c5dVpYTmxMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MTg6MDkuODU3WiIsInB1ciI6ImJsb2Jfa2V5In19--8fa9c453a72b7bfdd364d974d745cbeaffcd9afa/japonese.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22japonese.jpeg%22%3B+filename%2A%3DUTF-8%27%27japonese.jpeg" for 127.0.0.1 at 2021-06-20 11:13:09 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"japonese.jpeg\"; filename*=UTF-8''japonese.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkbVYyWVRremFtTndialJwTVdWaWFqaGlkalo2YzJsdmIzcDZhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1waGNHOXVaWE5sTG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnBoY0c5dVpYTmxMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MTg6MDkuODU3WiIsInB1ciI6ImJsb2Jfa2V5In19--8fa9c453a72b7bfdd364d974d745cbeaffcd9afa", "filename"=>"japonese"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--122c185dc1f627370c99eee5b02f9f7334cbf2ef/peruvian.jpg" for 127.0.0.1 at 2021-06-20 11:13:09 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--122c185dc1f627370c99eee5b02f9f7334cbf2ef", "filename"=>"peruvian"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c05d81e97b1299985c18344514fa89f60170f3c5/mexican.jpg" for 127.0.0.1 at 2021-06-20 11:13:09 -0300
+[36m  Disk Storage (1.2ms) [0m[34mGenerated URL for file at key: cm1s3gtezv1eroy0ow4s032xa7ej (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhZMjB4Y3pObmRHVjZkakZsY205NU1HOTNOSE13TXpKNFlUZGxhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CbGNuVjJhV0Z1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jR1Z5ZFhacFlXNHVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0yMFQxNDoxODowOS45MjdaIiwicHVyIjoiYmxvYl9rZXkifX0=--077a0f6125ba5c6f0fa0ae6e8720afdeeaeab6c8/peruvian.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22peruvian.jpg%22%3B+filename%2A%3DUTF-8%27%27peruvian.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhZMjB4Y3pObmRHVjZkakZsY205NU1HOTNOSE13TXpKNFlUZGxhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CbGNuVjJhV0Z1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jR1Z5ZFhacFlXNHVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0yMFQxNDoxODowOS45MjdaIiwicHVyIjoiYmxvYl9rZXkifX0=--077a0f6125ba5c6f0fa0ae6e8720afdeeaeab6c8/peruvian.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22peruvian.jpg%22%3B+filename%2A%3DUTF-8%27%27peruvian.jpg
+Completed 302 Found in 20ms (ActiveRecord: 0.4ms | Allocations: 1723)
+
+
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c05d81e97b1299985c18344514fa89f60170f3c5", "filename"=>"mexican"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: ijfb4sfwarfm53veuposse55k1ip (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV3BtWWpSelpuZGhjbVp0TlROMlpYVndiM056WlRVMWF6RnBjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xbGVHbGpZVzR1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZHRaWGhwWTJGdUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIxLTA2LTIwVDE0OjE4OjA5Ljk1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3403953ed5356ef40c1537e138c0826bbc15ce12/mexican.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mexican.jpg%22%3B+filename%2A%3DUTF-8%27%27mexican.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV3BtWWpSelpuZGhjbVp0TlROMlpYVndiM056WlRVMWF6RnBjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xbGVHbGpZVzR1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZHRaWGhwWTJGdUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIxLTA2LTIwVDE0OjE4OjA5Ljk1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3403953ed5356ef40c1537e138c0826bbc15ce12/mexican.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mexican.jpg%22%3B+filename%2A%3DUTF-8%27%27mexican.jpg
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 1499)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV3BtWWpSelpuZGhjbVp0TlROMlpYVndiM056WlRVMWF6RnBjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xbGVHbGpZVzR1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZHRaWGhwWTJGdUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIxLTA2LTIwVDE0OjE4OjA5Ljk1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3403953ed5356ef40c1537e138c0826bbc15ce12/mexican.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mexican.jpg%22%3B+filename%2A%3DUTF-8%27%27mexican.jpg" for 127.0.0.1 at 2021-06-20 11:13:09 -0300
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhZMjB4Y3pObmRHVjZkakZsY205NU1HOTNOSE13TXpKNFlUZGxhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CbGNuVjJhV0Z1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jR1Z5ZFhacFlXNHVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0yMFQxNDoxODowOS45MjdaIiwicHVyIjoiYmxvYl9rZXkifX0=--077a0f6125ba5c6f0fa0ae6e8720afdeeaeab6c8/peruvian.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22peruvian.jpg%22%3B+filename%2A%3DUTF-8%27%27peruvian.jpg" for 127.0.0.1 at 2021-06-20 11:13:09 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"mexican.jpg\"; filename*=UTF-8''mexican.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV3BtWWpSelpuZGhjbVp0TlROMlpYVndiM056WlRVMWF6RnBjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xbGVHbGpZVzR1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZHRaWGhwWTJGdUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIxLTA2LTIwVDE0OjE4OjA5Ljk1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3403953ed5356ef40c1537e138c0826bbc15ce12", "filename"=>"mexican"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 191)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"peruvian.jpg\"; filename*=UTF-8''peruvian.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhZMjB4Y3pObmRHVjZkakZsY205NU1HOTNOSE13TXpKNFlUZGxhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CbGNuVjJhV0Z1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jR1Z5ZFhacFlXNHVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0yMFQxNDoxODowOS45MjdaIiwicHVyIjoiYmxvYl9rZXkifX0=--077a0f6125ba5c6f0fa0ae6e8720afdeeaeab6c8", "filename"=>"peruvian"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b179e65845d6121f4a3a99b7c8e6c7e707ac4dd5/vegan.jpeg" for 127.0.0.1 at 2021-06-20 11:13:10 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b179e65845d6121f4a3a99b7c8e6c7e707ac4dd5", "filename"=>"vegan"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: 4pwqteb6ray4th2r4r5z0j3n7khk (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOSEIzY1hSbFlqWnlZWGswZEdneWNqUnlOWG93YWpOdU4ydG9hd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5abFoyRnVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozWmxaMkZ1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTIwVDE0OjE4OjEwLjA1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3e7883f89972a5614e2f53425b1f0d24f60a7c2f/vegan.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22vegan.jpeg%22%3B+filename%2A%3DUTF-8%27%27vegan.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOSEIzY1hSbFlqWnlZWGswZEdneWNqUnlOWG93YWpOdU4ydG9hd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5abFoyRnVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozWmxaMkZ1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTIwVDE0OjE4OjEwLjA1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3e7883f89972a5614e2f53425b1f0d24f60a7c2f/vegan.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22vegan.jpeg%22%3B+filename%2A%3DUTF-8%27%27vegan.jpeg
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1497)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOSEIzY1hSbFlqWnlZWGswZEdneWNqUnlOWG93YWpOdU4ydG9hd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5abFoyRnVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozWmxaMkZ1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTIwVDE0OjE4OjEwLjA1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3e7883f89972a5614e2f53425b1f0d24f60a7c2f/vegan.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22vegan.jpeg%22%3B+filename%2A%3DUTF-8%27%27vegan.jpeg" for 127.0.0.1 at 2021-06-20 11:13:10 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"vegan.jpeg\"; filename*=UTF-8''vegan.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOSEIzY1hSbFlqWnlZWGswZEdneWNqUnlOWG93YWpOdU4ydG9hd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5abFoyRnVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozWmxaMkZ1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTIwVDE0OjE4OjEwLjA1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3e7883f89972a5614e2f53425b1f0d24f60a7c2f", "filename"=>"vegan"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--74e3f5705e58dde74ec2e7c6298baf19b336234d/3.jpg" for 127.0.0.1 at 2021-06-20 11:13:10 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--74e3f5705e58dde74ec2e7c6298baf19b336234d", "filename"=>"3"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: ri2gpczlginu59lh198o648759h4 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MTg6MTAuNzU4WiIsInB1ciI6ImJsb2Jfa2V5In19--f552d9f6785997236277a11943552d79f17a7ee3/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MTg6MTAuNzU4WiIsInB1ciI6ImJsb2Jfa2V5In19--f552d9f6785997236277a11943552d79f17a7ee3/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1497)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MTg6MTAuNzU4WiIsInB1ciI6ImJsb2Jfa2V5In19--f552d9f6785997236277a11943552d79f17a7ee3/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg" for 127.0.0.1 at 2021-06-20 11:13:10 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"3.jpg\"; filename*=UTF-8''3.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MTg6MTAuNzU4WiIsInB1ciI6ImJsb2Jfa2V5In19--f552d9f6785997236277a11943552d79f17a7ee3", "filename"=>"3"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dd3c567f5d78ca2063fcbe1bbf47a4cafc2aa9e4/5.jpg" for 127.0.0.1 at 2021-06-20 11:13:11 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dd3c567f5d78ca2063fcbe1bbf47a4cafc2aa9e4", "filename"=>"5"}
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+[36m  Disk Storage (1.3ms) [0m[34mGenerated URL for file at key: 4dy7lxifjcifasgbmewmccc2xq4o (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOR1I1TjJ4NGFXWnFZMmxtWVhOblltMWxkMjFqWTJNeWVIRTBid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MTg6MTEuMDgzWiIsInB1ciI6ImJsb2Jfa2V5In19--6d0dfb0f4b9f5e5977991e176967193ff20ae129/5.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%225.jpg%22%3B+filename%2A%3DUTF-8%27%275.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOR1I1TjJ4NGFXWnFZMmxtWVhOblltMWxkMjFqWTJNeWVIRTBid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MTg6MTEuMDgzWiIsInB1ciI6ImJsb2Jfa2V5In19--6d0dfb0f4b9f5e5977991e176967193ff20ae129/5.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%225.jpg%22%3B+filename%2A%3DUTF-8%27%275.jpg
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms | Allocations: 1497)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOR1I1TjJ4NGFXWnFZMmxtWVhOblltMWxkMjFqWTJNeWVIRTBid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MTg6MTEuMDgzWiIsInB1ciI6ImJsb2Jfa2V5In19--6d0dfb0f4b9f5e5977991e176967193ff20ae129/5.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%225.jpg%22%3B+filename%2A%3DUTF-8%27%275.jpg" for 127.0.0.1 at 2021-06-20 11:13:11 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"5.jpg\"; filename*=UTF-8''5.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOR1I1TjJ4NGFXWnFZMmxtWVhOblltMWxkMjFqWTJNeWVIRTBid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MTg6MTEuMDgzWiIsInB1ciI6ImJsb2Jfa2V5In19--6d0dfb0f4b9f5e5977991e176967193ff20ae129", "filename"=>"5"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d66447237eba6f8f6962fcf5ce27ad4915fa7f7/6.jpg" for 127.0.0.1 at 2021-06-20 11:13:12 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d66447237eba6f8f6962fcf5ce27ad4915fa7f7", "filename"=>"6"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+[36m  Disk Storage (1.6ms) [0m[34mGenerated URL for file at key: x5mf4ixd5vlaqwg2tkw9rlyysoum (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhlRFZ0WmpScGVHUTFkbXhoY1hkbk1uUnJkemx5YkhsNWMyOTFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MTg6MTIuMjA0WiIsInB1ciI6ImJsb2Jfa2V5In19--85523864e155a7ad78ec79ffa097f559c59a6680/6.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%226.jpg%22%3B+filename%2A%3DUTF-8%27%276.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhlRFZ0WmpScGVHUTFkbXhoY1hkbk1uUnJkemx5YkhsNWMyOTFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MTg6MTIuMjA0WiIsInB1ciI6ImJsb2Jfa2V5In19--85523864e155a7ad78ec79ffa097f559c59a6680/6.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%226.jpg%22%3B+filename%2A%3DUTF-8%27%276.jpg
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 1497)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhlRFZ0WmpScGVHUTFkbXhoY1hkbk1uUnJkemx5YkhsNWMyOTFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MTg6MTIuMjA0WiIsInB1ciI6ImJsb2Jfa2V5In19--85523864e155a7ad78ec79ffa097f559c59a6680/6.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%226.jpg%22%3B+filename%2A%3DUTF-8%27%276.jpg" for 127.0.0.1 at 2021-06-20 11:13:12 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"6.jpg\"; filename*=UTF-8''6.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhlRFZ0WmpScGVHUTFkbXhoY1hkbk1uUnJkemx5YkhsNWMyOTFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MTg6MTIuMjA0WiIsInB1ciI6ImJsb2Jfa2V5In19--85523864e155a7ad78ec79ffa097f559c59a6680", "filename"=>"6"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/api/restaurants?category=japonesa&city=Maceio" for ::1 at 2021-06-20 11:31:12 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RestaurantsController#index as JSON
+  Parameters: {"category"=>"japonesa", "city"=>"Maceio"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."city" = ?[0m  [["city", "Maceio"]]
+  ↳ app/controllers/restaurants_controller.rb:29:in `filter_by_category'
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 35], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 35]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 35]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 69], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 16.4ms | Allocations: 2203)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 70], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 7.5ms | Allocations: 2199)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 26.4ms | Allocations: 5515)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 33.4ms | Allocations: 8590)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 37], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.1ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 37]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 37]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 73], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 3.9ms | Allocations: 1120)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 74], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 6.9ms | Allocations: 2198)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 13.6ms | Allocations: 4411)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 20.3ms | Allocations: 7420)
+  Rendered restaurants/index.json.jbuilder (Duration: 55.1ms | Allocations: 16811)
+Completed 200 OK in 64ms (Views: 53.1ms | ActiveRecord: 3.3ms | Allocations: 19759)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dd3c567f5d78ca2063fcbe1bbf47a4cafc2aa9e4/5.jpg" for 127.0.0.1 at 2021-06-20 11:31:12 -0300
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d66447237eba6f8f6962fcf5ce27ad4915fa7f7/6.jpg" for 127.0.0.1 at 2021-06-20 11:31:12 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d66447237eba6f8f6962fcf5ce27ad4915fa7f7", "filename"=>"6"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dd3c567f5d78ca2063fcbe1bbf47a4cafc2aa9e4", "filename"=>"5"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: x5mf4ixd5vlaqwg2tkw9rlyysoum (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhlRFZ0WmpScGVHUTFkbXhoY1hkbk1uUnJkemx5YkhsNWMyOTFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MzY6MTIuNTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--842e81112299951b44b6a4fee51ce9a0a41ca4ea/6.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%226.jpg%22%3B+filename%2A%3DUTF-8%27%276.jpg)[0m
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: 4dy7lxifjcifasgbmewmccc2xq4o (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOR1I1TjJ4NGFXWnFZMmxtWVhOblltMWxkMjFqWTJNeWVIRTBid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MzY6MTIuNTg2WiIsInB1ciI6ImJsb2Jfa2V5In19--3bfbb00f4bfffa87f154c0a375f29e403ba41627/5.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%225.jpg%22%3B+filename%2A%3DUTF-8%27%275.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhlRFZ0WmpScGVHUTFkbXhoY1hkbk1uUnJkemx5YkhsNWMyOTFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MzY6MTIuNTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--842e81112299951b44b6a4fee51ce9a0a41ca4ea/6.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%226.jpg%22%3B+filename%2A%3DUTF-8%27%276.jpg
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOR1I1TjJ4NGFXWnFZMmxtWVhOblltMWxkMjFqWTJNeWVIRTBid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MzY6MTIuNTg2WiIsInB1ciI6ImJsb2Jfa2V5In19--3bfbb00f4bfffa87f154c0a375f29e403ba41627/5.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%225.jpg%22%3B+filename%2A%3DUTF-8%27%275.jpg
+Completed 302 Found in 14ms (ActiveRecord: 0.2ms | Allocations: 3342)
+
+
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms | Allocations: 1587)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhlRFZ0WmpScGVHUTFkbXhoY1hkbk1uUnJkemx5YkhsNWMyOTFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MzY6MTIuNTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--842e81112299951b44b6a4fee51ce9a0a41ca4ea/6.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%226.jpg%22%3B+filename%2A%3DUTF-8%27%276.jpg" for 127.0.0.1 at 2021-06-20 11:31:12 -0300
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOR1I1TjJ4NGFXWnFZMmxtWVhOblltMWxkMjFqWTJNeWVIRTBid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MzY6MTIuNTg2WiIsInB1ciI6ImJsb2Jfa2V5In19--3bfbb00f4bfffa87f154c0a375f29e403ba41627/5.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%225.jpg%22%3B+filename%2A%3DUTF-8%27%275.jpg" for 127.0.0.1 at 2021-06-20 11:31:12 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"6.jpg\"; filename*=UTF-8''6.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhlRFZ0WmpScGVHUTFkbXhoY1hkbk1uUnJkemx5YkhsNWMyOTFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MzY6MTIuNTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--842e81112299951b44b6a4fee51ce9a0a41ca4ea", "filename"=>"6"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"5.jpg\"; filename*=UTF-8''5.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOR1I1TjJ4NGFXWnFZMmxtWVhOblltMWxkMjFqWTJNeWVIRTBid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MzY6MTIuNTg2WiIsInB1ciI6ImJsb2Jfa2V5In19--3bfbb00f4bfffa87f154c0a375f29e403ba41627", "filename"=>"5"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 355)
+
+
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 212)
+
+
+Started GET "/api/restaurants?category=mexicana&city=Maceio" for ::1 at 2021-06-20 11:31:12 -0300
+Processing by RestaurantsController#index as JSON
+  Parameters: {"category"=>"mexicana", "city"=>"Maceio"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."city" = ?[0m  [["city", "Maceio"]]
+  ↳ app/controllers/restaurants_controller.rb:29:in `filter_by_category'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  Rendering restaurants/index.json.jbuilder
+  Rendered restaurants/index.json.jbuilder (Duration: 0.2ms | Allocations: 21)
+Completed 200 OK in 14ms (Views: 1.2ms | ActiveRecord: 1.3ms | Allocations: 2966)
+
+
+Started GET "/api/restaurants?category=peruana&city=Maceio" for ::1 at 2021-06-20 11:31:13 -0300
+Processing by RestaurantsController#index as JSON
+  Parameters: {"category"=>"peruana", "city"=>"Maceio"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."city" = ?[0m  [["city", "Maceio"]]
+  ↳ app/controllers/restaurants_controller.rb:29:in `filter_by_category'
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  Rendering restaurants/index.json.jbuilder
+  Rendered restaurants/index.json.jbuilder (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 13ms (Views: 0.7ms | ActiveRecord: 1.0ms | Allocations: 2923)
+
+
+Started GET "/api/restaurants?category=vegana&city=Maceio" for ::1 at 2021-06-20 11:31:14 -0300
+Processing by RestaurantsController#index as JSON
+  Parameters: {"category"=>"vegana", "city"=>"Maceio"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."city" = ?[0m  [["city", "Maceio"]]
+  ↳ app/controllers/restaurants_controller.rb:29:in `filter_by_category'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  Rendering restaurants/index.json.jbuilder
+  Rendered restaurants/index.json.jbuilder (Duration: 0.2ms | Allocations: 21)
+Completed 200 OK in 14ms (Views: 1.3ms | ActiveRecord: 0.9ms | Allocations: 2923)
+
+
+Started GET "/api/restaurants?category=italiana&city=Maceio" for ::1 at 2021-06-20 11:31:15 -0300
+Processing by RestaurantsController#index as JSON
+  Parameters: {"category"=>"italiana", "city"=>"Maceio"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."city" = ?[0m  [["city", "Maceio"]]
+  ↳ app/controllers/restaurants_controller.rb:29:in `filter_by_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:30:in `block in filter_by_category'
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 32], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mProductCategory Load (0.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 32]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 32]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 5.6ms | Allocations: 2199)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 5.8ms | Allocations: 2198)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 14.2ms | Allocations: 5510)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 23.2ms | Allocations: 8564)
+  Rendered restaurants/index.json.jbuilder (Duration: 24.4ms | Allocations: 8981)
+Completed 200 OK in 35ms (Views: 23.9ms | ActiveRecord: 2.0ms | Allocations: 11883)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--74e3f5705e58dde74ec2e7c6298baf19b336234d/3.jpg" for 127.0.0.1 at 2021-06-20 11:31:15 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--74e3f5705e58dde74ec2e7c6298baf19b336234d", "filename"=>"3"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: ri2gpczlginu59lh198o648759h4 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MzY6MTUuNTkxWiIsInB1ciI6ImJsb2Jfa2V5In19--7fd8163dc7750fd3a31895ac7cf1ba0bf105df46/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MzY6MTUuNTkxWiIsInB1ciI6ImJsb2Jfa2V5In19--7fd8163dc7750fd3a31895ac7cf1ba0bf105df46/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms | Allocations: 1498)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MzY6MTUuNTkxWiIsInB1ciI6ImJsb2Jfa2V5In19--7fd8163dc7750fd3a31895ac7cf1ba0bf105df46/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg" for 127.0.0.1 at 2021-06-20 11:31:15 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"3.jpg\"; filename*=UTF-8''3.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MzY6MTUuNTkxWiIsInB1ciI6ImJsb2Jfa2V5In19--7fd8163dc7750fd3a31895ac7cf1ba0bf105df46", "filename"=>"3"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/api/restaurants/32" for ::1 at 2021-06-20 11:31:19 -0300
+Processing by RestaurantsController#show as JSON
+  Parameters: {"id"=>"32"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:17:in `set_restaurant'
+  Rendering restaurants/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 32], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 32]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 32]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 4.9ms | Allocations: 2183)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 4.6ms | Allocations: 2182)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 13.7ms | Allocations: 5451)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 27.8ms | Allocations: 9195)
+  Rendered restaurants/show.json.jbuilder (Duration: 35.5ms | Allocations: 9667)
+Completed 200 OK in 40ms (Views: 34.3ms | ActiveRecord: 2.2ms | Allocations: 10672)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9285d69348b7c6d564cceef88a1705902f25ef0a/berinjela.jpg" for 127.0.0.1 at 2021-06-20 11:31:19 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9285d69348b7c6d564cceef88a1705902f25ef0a", "filename"=>"berinjela"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: d3w3wnt0hl1r1sl49fh4p89imx7n (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRE4zTTNkdWREQm9iREZ5TVhOc05EbG1hRFJ3T0RscGJYZzNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KbGNtbHVhbVZzWVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkpsY21sdWFtVnNZUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MzY6MTkuMjE3WiIsInB1ciI6ImJsb2Jfa2V5In19--6e873c0e71cd249e449f4432343d00fc9f3d48ab/berinjela.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22berinjela.jpg%22%3B+filename%2A%3DUTF-8%27%27berinjela.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRE4zTTNkdWREQm9iREZ5TVhOc05EbG1hRFJ3T0RscGJYZzNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KbGNtbHVhbVZzWVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkpsY21sdWFtVnNZUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MzY6MTkuMjE3WiIsInB1ciI6ImJsb2Jfa2V5In19--6e873c0e71cd249e449f4432343d00fc9f3d48ab/berinjela.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22berinjela.jpg%22%3B+filename%2A%3DUTF-8%27%27berinjela.jpg
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1498)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRE4zTTNkdWREQm9iREZ5TVhOc05EbG1hRFJ3T0RscGJYZzNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KbGNtbHVhbVZzWVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkpsY21sdWFtVnNZUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MzY6MTkuMjE3WiIsInB1ciI6ImJsb2Jfa2V5In19--6e873c0e71cd249e449f4432343d00fc9f3d48ab/berinjela.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22berinjela.jpg%22%3B+filename%2A%3DUTF-8%27%27berinjela.jpg" for 127.0.0.1 at 2021-06-20 11:31:19 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"berinjela.jpg\"; filename*=UTF-8''berinjela.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRE4zTTNkdWREQm9iREZ5TVhOc05EbG1hRFJ3T0RscGJYZzNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KbGNtbHVhbVZzWVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkpsY21sdWFtVnNZUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjBUMTQ6MzY6MTkuMjE3WiIsInB1ciI6ImJsb2Jfa2V5In19--6e873c0e71cd249e449f4432343d00fc9f3d48ab", "filename"=>"berinjela"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d5e08d510d13b3b29324cefacaf31be955bd181/fritas.jpg" for 127.0.0.1 at 2021-06-20 11:31:19 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d5e08d510d13b3b29324cefacaf31be955bd181", "filename"=>"fritas"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: qbyoifpj2jlo9iubqfplu1sv67u8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV0o1YjJsbWNHb3lhbXh2T1dsMVluRm1jR3gxTVhOMk5qZDFPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1aeWFYUmhjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyWnlhWFJoY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTIwVDE0OjM2OjE5LjUzNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d3b4785aad9e541d3c06437fe6a5b3dc0945130b/fritas.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22fritas.jpg%22%3B+filename%2A%3DUTF-8%27%27fritas.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV0o1YjJsbWNHb3lhbXh2T1dsMVluRm1jR3gxTVhOMk5qZDFPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1aeWFYUmhjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyWnlhWFJoY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTIwVDE0OjM2OjE5LjUzNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d3b4785aad9e541d3c06437fe6a5b3dc0945130b/fritas.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22fritas.jpg%22%3B+filename%2A%3DUTF-8%27%27fritas.jpg
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms | Allocations: 1497)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV0o1YjJsbWNHb3lhbXh2T1dsMVluRm1jR3gxTVhOMk5qZDFPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1aeWFYUmhjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyWnlhWFJoY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTIwVDE0OjM2OjE5LjUzNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d3b4785aad9e541d3c06437fe6a5b3dc0945130b/fritas.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22fritas.jpg%22%3B+filename%2A%3DUTF-8%27%27fritas.jpg" for 127.0.0.1 at 2021-06-20 11:31:19 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"fritas.jpg\"; filename*=UTF-8''fritas.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV0o1YjJsbWNHb3lhbXh2T1dsMVluRm1jR3gxTVhOMk5qZDFPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1aeWFYUmhjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyWnlhWFJoY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTIwVDE0OjM2OjE5LjUzNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d3b4785aad9e541d3c06437fe6a5b3dc0945130b", "filename"=>"fritas"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/api/categories" for ::1 at 2021-06-24 20:14:57 -0300
+Started GET "/api/restaurants?city=Maceio" for ::1 at 2021-06-24 20:14:57 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#index as JSON
+  Rendering categories/index.json.jbuilder
+Processing by RestaurantsController#index as JSON
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."title" ASC[0m
+  Parameters: {"city"=>"Maceio"}
+  ↳ app/views/categories/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  Rendering restaurants/index.json.jbuilder
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."city" = ?[0m  [["city", "Maceio"]]
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 32], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/index.json.jbuilder:4
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mProductCategory Load (0.1ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 32]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 32]]
+  ↳ app/views/categories/index.json.jbuilder:4
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (Duration: 13.4ms | Allocations: 4914)
+  ↳ app/views/categories/index.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered categories/index.json.jbuilder (Duration: 162.4ms | Allocations: 63464)
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+Completed 200 OK in 183ms (Views: 168.5ms | ActiveRecord: 3.2ms | Allocations: 68920)
+
+
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 7.7ms | Allocations: 2891)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 43.5ms | Allocations: 18045)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 99.8ms | Allocations: 41051)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 35], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 35]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 35]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 69], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 7.4ms | Allocations: 2203)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 70], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 4.2ms | Allocations: 2203)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 14.8ms | Allocations: 5501)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 30.3ms | Allocations: 9264)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 37], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 37]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 37]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 73], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 2.8ms | Allocations: 1122)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 74], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 6.2ms | Allocations: 2210)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 12.8ms | Allocations: 4427)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 23.2ms | Allocations: 8136)
+  Rendered restaurants/index.json.jbuilder (Duration: 188.8ms | Allocations: 73013)
+Completed 200 OK in 220ms (Views: 204.1ms | ActiveRecord: 7.4ms | Allocations: 83288)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--049b5eb383e0428347c3acc29568d6417ea73f77/italian.jpeg" for 127.0.0.1 at 2021-06-24 20:14:57 -0300
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c05d81e97b1299985c18344514fa89f60170f3c5/mexican.jpg" for 127.0.0.1 at 2021-06-24 20:14:57 -0300
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8024c37bd1b7bd8a0782d04c9274a67dd3748b11/japonese.jpeg" for 127.0.0.1 at 2021-06-24 20:14:57 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--049b5eb383e0428347c3acc29568d6417ea73f77", "filename"=>"italian"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c05d81e97b1299985c18344514fa89f60170f3c5", "filename"=>"mexican"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8024c37bd1b7bd8a0782d04c9274a67dd3748b11", "filename"=>"japonese"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[36m  Disk Storage (66.2ms) [0m[34mGenerated URL for file at key: ijfb4sfwarfm53veuposse55k1ip (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV3BtWWpSelpuZGhjbVp0TlROMlpYVndiM056WlRVMWF6RnBjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xbGVHbGpZVzR1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZHRaWGhwWTJGdUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIxLTA2LTI0VDIzOjE5OjU3Ljc2OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--af2fdd81c972ffe224c1afa5ac10620e7d381349/mexican.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mexican.jpg%22%3B+filename%2A%3DUTF-8%27%27mexican.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV3BtWWpSelpuZGhjbVp0TlROMlpYVndiM056WlRVMWF6RnBjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xbGVHbGpZVzR1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZHRaWGhwWTJGdUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIxLTA2LTI0VDIzOjE5OjU3Ljc2OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--af2fdd81c972ffe224c1afa5ac10620e7d381349/mexican.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mexican.jpg%22%3B+filename%2A%3DUTF-8%27%27mexican.jpg
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--122c185dc1f627370c99eee5b02f9f7334cbf2ef/peruvian.jpg" for 127.0.0.1 at 2021-06-24 20:14:57 -0300
+Completed 302 Found in 79ms (ActiveRecord: 0.1ms | Allocations: 27960)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+[36m  Disk Storage (80.9ms) [0m[34mGenerated URL for file at key: hxxvjc7jb01gemz68xifp9mghijg (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhSGg0ZG1wak4ycGlNREZuWlcxNk5qaDRhV1p3T1cxbmFHbHFad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sMFlXeHBZVzR1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25hWFJoYkdsaGJpNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0yNFQyMzoxOTo1Ny43NzhaIiwicHVyIjoiYmxvYl9rZXkifX0=--9387c78531c31fec8404c59f4422f65be6360d37/italian.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22italian.jpeg%22%3B+filename%2A%3DUTF-8%27%27italian.jpeg)[0m
+Processing by ActiveStorage::BlobsController#show as JPEG
+[36m  Disk Storage (70.3ms) [0m[34mGenerated URL for file at key: veva93jcpn4i1ebj8bv6zsioozzj (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkbVYyWVRremFtTndialJwTVdWaWFqaGlkalo2YzJsdmIzcDZhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1waGNHOXVaWE5sTG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnBoY0c5dVpYTmxMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MTk6NTcuNzgyWiIsInB1ciI6ImJsb2Jfa2V5In19--da66159da2211e88c940dedc2a9c7f7bcb2b8cd9/japonese.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22japonese.jpeg%22%3B+filename%2A%3DUTF-8%27%27japonese.jpeg)[0m
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--122c185dc1f627370c99eee5b02f9f7334cbf2ef", "filename"=>"peruvian"}
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b179e65845d6121f4a3a99b7c8e6c7e707ac4dd5/vegan.jpeg" for 127.0.0.1 at 2021-06-24 20:14:57 -0300
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkbVYyWVRremFtTndialJwTVdWaWFqaGlkalo2YzJsdmIzcDZhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1waGNHOXVaWE5sTG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnBoY0c5dVpYTmxMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MTk6NTcuNzgyWiIsInB1ciI6ImJsb2Jfa2V5In19--da66159da2211e88c940dedc2a9c7f7bcb2b8cd9/japonese.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22japonese.jpeg%22%3B+filename%2A%3DUTF-8%27%27japonese.jpeg
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: cm1s3gtezv1eroy0ow4s032xa7ej (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhZMjB4Y3pObmRHVjZkakZsY205NU1HOTNOSE13TXpKNFlUZGxhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CbGNuVjJhV0Z1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jR1Z5ZFhacFlXNHVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0yNFQyMzoxOTo1Ny43OTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--1f99c405300b4e294861e7999a996a715753d57a/peruvian.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22peruvian.jpg%22%3B+filename%2A%3DUTF-8%27%27peruvian.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhSGg0ZG1wak4ycGlNREZuWlcxNk5qaDRhV1p3T1cxbmFHbHFad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sMFlXeHBZVzR1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25hWFJoYkdsaGJpNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0yNFQyMzoxOTo1Ny43NzhaIiwicHVyIjoiYmxvYl9rZXkifX0=--9387c78531c31fec8404c59f4422f65be6360d37/italian.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22italian.jpeg%22%3B+filename%2A%3DUTF-8%27%27italian.jpeg
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhZMjB4Y3pObmRHVjZkakZsY205NU1HOTNOSE13TXpKNFlUZGxhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CbGNuVjJhV0Z1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jR1Z5ZFhacFlXNHVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0yNFQyMzoxOTo1Ny43OTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--1f99c405300b4e294861e7999a996a715753d57a/peruvian.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22peruvian.jpg%22%3B+filename%2A%3DUTF-8%27%27peruvian.jpg
+Completed 302 Found in 86ms (ActiveRecord: 0.3ms | Allocations: 28576)
+
+
+Completed 302 Found in 101ms (ActiveRecord: 0.1ms | Allocations: 33904)
+
+
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b179e65845d6121f4a3a99b7c8e6c7e707ac4dd5", "filename"=>"vegan"}
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 1588)
+
+
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: 4pwqteb6ray4th2r4r5z0j3n7khk (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOSEIzY1hSbFlqWnlZWGswZEdneWNqUnlOWG93YWpOdU4ydG9hd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5abFoyRnVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozWmxaMkZ1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTI0VDIzOjE5OjU3LjgwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b53f23698c2f5ecf442de745fa69bf98fdf49838/vegan.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22vegan.jpeg%22%3B+filename%2A%3DUTF-8%27%27vegan.jpeg)[0m
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV3BtWWpSelpuZGhjbVp0TlROMlpYVndiM056WlRVMWF6RnBjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xbGVHbGpZVzR1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZHRaWGhwWTJGdUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIxLTA2LTI0VDIzOjE5OjU3Ljc2OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--af2fdd81c972ffe224c1afa5ac10620e7d381349/mexican.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mexican.jpg%22%3B+filename%2A%3DUTF-8%27%27mexican.jpg" for 127.0.0.1 at 2021-06-24 20:14:57 -0300
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOSEIzY1hSbFlqWnlZWGswZEdneWNqUnlOWG93YWpOdU4ydG9hd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5abFoyRnVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozWmxaMkZ1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTI0VDIzOjE5OjU3LjgwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b53f23698c2f5ecf442de745fa69bf98fdf49838/vegan.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22vegan.jpeg%22%3B+filename%2A%3DUTF-8%27%27vegan.jpeg
+Completed 302 Found in 28ms (ActiveRecord: 0.1ms | Allocations: 2113)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhSGg0ZG1wak4ycGlNREZuWlcxNk5qaDRhV1p3T1cxbmFHbHFad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sMFlXeHBZVzR1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25hWFJoYkdsaGJpNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0yNFQyMzoxOTo1Ny43NzhaIiwicHVyIjoiYmxvYl9rZXkifX0=--9387c78531c31fec8404c59f4422f65be6360d37/italian.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22italian.jpeg%22%3B+filename%2A%3DUTF-8%27%27italian.jpeg" for 127.0.0.1 at 2021-06-24 20:14:57 -0300
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkbVYyWVRremFtTndialJwTVdWaWFqaGlkalo2YzJsdmIzcDZhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1waGNHOXVaWE5sTG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnBoY0c5dVpYTmxMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MTk6NTcuNzgyWiIsInB1ciI6ImJsb2Jfa2V5In19--da66159da2211e88c940dedc2a9c7f7bcb2b8cd9/japonese.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22japonese.jpeg%22%3B+filename%2A%3DUTF-8%27%27japonese.jpeg" for 127.0.0.1 at 2021-06-24 20:14:57 -0300
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhZMjB4Y3pObmRHVjZkakZsY205NU1HOTNOSE13TXpKNFlUZGxhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CbGNuVjJhV0Z1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jR1Z5ZFhacFlXNHVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0yNFQyMzoxOTo1Ny43OTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--1f99c405300b4e294861e7999a996a715753d57a/peruvian.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22peruvian.jpg%22%3B+filename%2A%3DUTF-8%27%27peruvian.jpg" for 127.0.0.1 at 2021-06-24 20:14:57 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOSEIzY1hSbFlqWnlZWGswZEdneWNqUnlOWG93YWpOdU4ydG9hd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5abFoyRnVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozWmxaMkZ1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTI0VDIzOjE5OjU3LjgwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b53f23698c2f5ecf442de745fa69bf98fdf49838/vegan.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22vegan.jpeg%22%3B+filename%2A%3DUTF-8%27%27vegan.jpeg" for 127.0.0.1 at 2021-06-24 20:14:57 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"italian.jpeg\"; filename*=UTF-8''italian.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhSGg0ZG1wak4ycGlNREZuWlcxNk5qaDRhV1p3T1cxbmFHbHFad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1sMFlXeHBZVzR1YW5CbFp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25hWFJoYkdsaGJpNXFjR1ZuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0yNFQyMzoxOTo1Ny43NzhaIiwicHVyIjoiYmxvYl9rZXkifX0=--9387c78531c31fec8404c59f4422f65be6360d37", "filename"=>"italian"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"japonese.jpeg\"; filename*=UTF-8''japonese.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhkbVYyWVRremFtTndialJwTVdWaWFqaGlkalo2YzJsdmIzcDZhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1waGNHOXVaWE5sTG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnBoY0c5dVpYTmxMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MTk6NTcuNzgyWiIsInB1ciI6ImJsb2Jfa2V5In19--da66159da2211e88c940dedc2a9c7f7bcb2b8cd9", "filename"=>"japonese"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"mexican.jpg\"; filename*=UTF-8''mexican.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhV3BtWWpSelpuZGhjbVp0TlROMlpYVndiM056WlRVMWF6RnBjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW0xbGVHbGpZVzR1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZHRaWGhwWTJGdUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDIxLTA2LTI0VDIzOjE5OjU3Ljc2OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--af2fdd81c972ffe224c1afa5ac10620e7d381349", "filename"=>"mexican"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 216)
+
+
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"peruvian.jpg\"; filename*=UTF-8''peruvian.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhZMjB4Y3pObmRHVjZkakZsY205NU1HOTNOSE13TXpKNFlUZGxhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5CbGNuVjJhV0Z1TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25jR1Z5ZFhacFlXNHVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAyMS0wNi0yNFQyMzoxOTo1Ny43OTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--1f99c405300b4e294861e7999a996a715753d57a", "filename"=>"peruvian"}
+Processing by ActiveStorage::DiskController#show as JPEG
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 2715)
+
+
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"vegan.jpeg\"; filename*=UTF-8''vegan.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOSEIzY1hSbFlqWnlZWGswZEdneWNqUnlOWG93YWpOdU4ydG9hd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5abFoyRnVMbXB3WldjaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkozWmxaMkZ1TG1wd1pXY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTI0VDIzOjE5OjU3LjgwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b53f23698c2f5ecf442de745fa69bf98fdf49838", "filename"=>"vegan"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 200)
+
+
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 354)
+
+
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--74e3f5705e58dde74ec2e7c6298baf19b336234d/3.jpg" for 127.0.0.1 at 2021-06-24 20:14:58 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--74e3f5705e58dde74ec2e7c6298baf19b336234d", "filename"=>"3"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: ri2gpczlginu59lh198o648759h4 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MTk6NTguNjQzWiIsInB1ciI6ImJsb2Jfa2V5In19--24b9c9dfea7d59779dc6920d7c2e88c64657ea89/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MTk6NTguNjQzWiIsInB1ciI6ImJsb2Jfa2V5In19--24b9c9dfea7d59779dc6920d7c2e88c64657ea89/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 1524)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MTk6NTguNjQzWiIsInB1ciI6ImJsb2Jfa2V5In19--24b9c9dfea7d59779dc6920d7c2e88c64657ea89/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg" for 127.0.0.1 at 2021-06-24 20:14:58 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"3.jpg\"; filename*=UTF-8''3.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MTk6NTguNjQzWiIsInB1ciI6ImJsb2Jfa2V5In19--24b9c9dfea7d59779dc6920d7c2e88c64657ea89", "filename"=>"3"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dd3c567f5d78ca2063fcbe1bbf47a4cafc2aa9e4/5.jpg" for 127.0.0.1 at 2021-06-24 20:14:58 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dd3c567f5d78ca2063fcbe1bbf47a4cafc2aa9e4", "filename"=>"5"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: 4dy7lxifjcifasgbmewmccc2xq4o (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOR1I1TjJ4NGFXWnFZMmxtWVhOblltMWxkMjFqWTJNeWVIRTBid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MTk6NTguOTU0WiIsInB1ciI6ImJsb2Jfa2V5In19--eea236cd5a413d71889c0c5032669c9b2493ee01/5.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%225.jpg%22%3B+filename%2A%3DUTF-8%27%275.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOR1I1TjJ4NGFXWnFZMmxtWVhOblltMWxkMjFqWTJNeWVIRTBid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MTk6NTguOTU0WiIsInB1ciI6ImJsb2Jfa2V5In19--eea236cd5a413d71889c0c5032669c9b2493ee01/5.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%225.jpg%22%3B+filename%2A%3DUTF-8%27%275.jpg
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms | Allocations: 1497)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOR1I1TjJ4NGFXWnFZMmxtWVhOblltMWxkMjFqWTJNeWVIRTBid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MTk6NTguOTU0WiIsInB1ciI6ImJsb2Jfa2V5In19--eea236cd5a413d71889c0c5032669c9b2493ee01/5.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%225.jpg%22%3B+filename%2A%3DUTF-8%27%275.jpg" for 127.0.0.1 at 2021-06-24 20:14:58 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"5.jpg\"; filename*=UTF-8''5.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOR1I1TjJ4NGFXWnFZMmxtWVhOblltMWxkMjFqWTJNeWVIRTBid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMxTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MTk6NTguOTU0WiIsInB1ciI6ImJsb2Jfa2V5In19--eea236cd5a413d71889c0c5032669c9b2493ee01", "filename"=>"5"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d66447237eba6f8f6962fcf5ce27ad4915fa7f7/6.jpg" for 127.0.0.1 at 2021-06-24 20:14:59 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d66447237eba6f8f6962fcf5ce27ad4915fa7f7", "filename"=>"6"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: x5mf4ixd5vlaqwg2tkw9rlyysoum (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhlRFZ0WmpScGVHUTFkbXhoY1hkbk1uUnJkemx5YkhsNWMyOTFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MTk6NTkuMzg5WiIsInB1ciI6ImJsb2Jfa2V5In19--7deab2c16292bb6a12914b65f9181c1c98004282/6.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%226.jpg%22%3B+filename%2A%3DUTF-8%27%276.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhlRFZ0WmpScGVHUTFkbXhoY1hkbk1uUnJkemx5YkhsNWMyOTFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MTk6NTkuMzg5WiIsInB1ciI6ImJsb2Jfa2V5In19--7deab2c16292bb6a12914b65f9181c1c98004282/6.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%226.jpg%22%3B+filename%2A%3DUTF-8%27%276.jpg
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1497)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhlRFZ0WmpScGVHUTFkbXhoY1hkbk1uUnJkemx5YkhsNWMyOTFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MTk6NTkuMzg5WiIsInB1ciI6ImJsb2Jfa2V5In19--7deab2c16292bb6a12914b65f9181c1c98004282/6.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%226.jpg%22%3B+filename%2A%3DUTF-8%27%276.jpg" for 127.0.0.1 at 2021-06-24 20:14:59 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"6.jpg\"; filename*=UTF-8''6.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhlRFZ0WmpScGVHUTFkbXhoY1hkbk1uUnJkemx5YkhsNWMyOTFiUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWMyTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MTk6NTkuMzg5WiIsInB1ciI6ImJsb2Jfa2V5In19--7deab2c16292bb6a12914b65f9181c1c98004282", "filename"=>"6"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/api/restaurants/32" for ::1 at 2021-06-24 20:15:20 -0300
+Processing by RestaurantsController#show as JSON
+  Parameters: {"id"=>"32"}
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:17:in `set_restaurant'
+  Rendering restaurants/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 32], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.2ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 32]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 32]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 7.6ms | Allocations: 2183)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 4.8ms | Allocations: 2182)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 14.7ms | Allocations: 5470)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 29.8ms | Allocations: 9261)
+  Rendered restaurants/show.json.jbuilder (Duration: 30.9ms | Allocations: 9734)
+Completed 200 OK in 38ms (Views: 29.0ms | ActiveRecord: 3.4ms | Allocations: 10743)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d5e08d510d13b3b29324cefacaf31be955bd181/fritas.jpg" for 127.0.0.1 at 2021-06-24 20:15:20 -0300
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9285d69348b7c6d564cceef88a1705902f25ef0a/berinjela.jpg" for 127.0.0.1 at 2021-06-24 20:15:20 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d5e08d510d13b3b29324cefacaf31be955bd181", "filename"=>"fritas"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+Processing by ActiveStorage::BlobsController#show as JPEG
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: qbyoifpj2jlo9iubqfplu1sv67u8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV0o1YjJsbWNHb3lhbXh2T1dsMVluRm1jR3gxTVhOMk5qZDFPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1aeWFYUmhjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyWnlhWFJoY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTI0VDIzOjIwOjIwLjYwNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3053fab28e28ed736b3b034e02fc217ff66d3bd1/fritas.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22fritas.jpg%22%3B+filename%2A%3DUTF-8%27%27fritas.jpg)[0m
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9285d69348b7c6d564cceef88a1705902f25ef0a", "filename"=>"berinjela"}
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV0o1YjJsbWNHb3lhbXh2T1dsMVluRm1jR3gxTVhOMk5qZDFPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1aeWFYUmhjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyWnlhWFJoY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTI0VDIzOjIwOjIwLjYwNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3053fab28e28ed736b3b034e02fc217ff66d3bd1/fritas.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22fritas.jpg%22%3B+filename%2A%3DUTF-8%27%27fritas.jpg
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 302 Found in 9ms (ActiveRecord: 0.1ms | Allocations: 2329)
+
+
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: d3w3wnt0hl1r1sl49fh4p89imx7n (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRE4zTTNkdWREQm9iREZ5TVhOc05EbG1hRFJ3T0RscGJYZzNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KbGNtbHVhbVZzWVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkpsY21sdWFtVnNZUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MjA6MjAuNjA5WiIsInB1ciI6ImJsb2Jfa2V5In19--08bd12fbdafa5b33c0532d2532db7c7dad3e1d31/berinjela.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22berinjela.jpg%22%3B+filename%2A%3DUTF-8%27%27berinjela.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRE4zTTNkdWREQm9iREZ5TVhOc05EbG1hRFJ3T0RscGJYZzNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KbGNtbHVhbVZzWVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkpsY21sdWFtVnNZUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MjA6MjAuNjA5WiIsInB1ciI6ImJsb2Jfa2V5In19--08bd12fbdafa5b33c0532d2532db7c7dad3e1d31/berinjela.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22berinjela.jpg%22%3B+filename%2A%3DUTF-8%27%27berinjela.jpg
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 1747)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRE4zTTNkdWREQm9iREZ5TVhOc05EbG1hRFJ3T0RscGJYZzNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KbGNtbHVhbVZzWVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkpsY21sdWFtVnNZUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MjA6MjAuNjA5WiIsInB1ciI6ImJsb2Jfa2V5In19--08bd12fbdafa5b33c0532d2532db7c7dad3e1d31/berinjela.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22berinjela.jpg%22%3B+filename%2A%3DUTF-8%27%27berinjela.jpg" for 127.0.0.1 at 2021-06-24 20:15:20 -0300
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV0o1YjJsbWNHb3lhbXh2T1dsMVluRm1jR3gxTVhOMk5qZDFPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1aeWFYUmhjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyWnlhWFJoY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTI0VDIzOjIwOjIwLjYwNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3053fab28e28ed736b3b034e02fc217ff66d3bd1/fritas.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22fritas.jpg%22%3B+filename%2A%3DUTF-8%27%27fritas.jpg" for 127.0.0.1 at 2021-06-24 20:15:20 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"fritas.jpg\"; filename*=UTF-8''fritas.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV0o1YjJsbWNHb3lhbXh2T1dsMVluRm1jR3gxTVhOMk5qZDFPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1aeWFYUmhjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyWnlhWFJoY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTI0VDIzOjIwOjIwLjYwNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3053fab28e28ed736b3b034e02fc217ff66d3bd1", "filename"=>"fritas"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"berinjela.jpg\"; filename*=UTF-8''berinjela.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRE4zTTNkdWREQm9iREZ5TVhOc05EbG1hRFJ3T0RscGJYZzNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KbGNtbHVhbVZzWVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkpsY21sdWFtVnNZUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MjA6MjAuNjA5WiIsInB1ciI6ImJsb2Jfa2V5In19--08bd12fbdafa5b33c0532d2532db7c7dad3e1d31", "filename"=>"berinjela"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 375)
+
+
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 214)
+
+
+Started GET "/api/restaurants/32" for ::1 at 2021-06-24 20:19:39 -0300
+Processing by RestaurantsController#show as JSON
+  Parameters: {"id"=>"32"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:17:in `set_restaurant'
+  Rendering restaurants/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 32], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:11
+  [1m[36mProductCategory Load (0.5ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."restaurant_id" = ?[0m  [["restaurant_id", 32]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:13
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."product_category_id" = ?[0m  [["product_category_id", 32]]
+  ↳ app/views/product_categories/_product_category.json.jbuilder:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 63], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 8.0ms | Allocations: 2183)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 64], ["record_type", "Product"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/views/products/_product.json.jbuilder:5
+  Rendered products/_product.json.jbuilder (Duration: 11.4ms | Allocations: 2182)
+  Rendered product_categories/_product_category.json.jbuilder (Duration: 25.1ms | Allocations: 5451)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 41.3ms | Allocations: 9190)
+  Rendered restaurants/show.json.jbuilder (Duration: 42.6ms | Allocations: 9600)
+Completed 200 OK in 47ms (Views: 41.8ms | ActiveRecord: 2.5ms | Allocations: 10335)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--74e3f5705e58dde74ec2e7c6298baf19b336234d/3.jpg" for 127.0.0.1 at 2021-06-24 20:19:39 -0300
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9285d69348b7c6d564cceef88a1705902f25ef0a/berinjela.jpg" for 127.0.0.1 at 2021-06-24 20:19:39 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d5e08d510d13b3b29324cefacaf31be955bd181/fritas.jpg" for 127.0.0.1 at 2021-06-24 20:19:39 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--74e3f5705e58dde74ec2e7c6298baf19b336234d", "filename"=>"3"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d5e08d510d13b3b29324cefacaf31be955bd181", "filename"=>"fritas"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+[36m  Disk Storage (1.3ms) [0m[34mGenerated URL for file at key: ri2gpczlginu59lh198o648759h4 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MjQ6MzkuMzQ0WiIsInB1ciI6ImJsb2Jfa2V5In19--ce8352a1ea3ad982bc10873be25d5f06ac569330/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg)[0m
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9285d69348b7c6d564cceef88a1705902f25ef0a", "filename"=>"berinjela"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MjQ6MzkuMzQ0WiIsInB1ciI6ImJsb2Jfa2V5In19--ce8352a1ea3ad982bc10873be25d5f06ac569330/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg
+[36m  Disk Storage (1.8ms) [0m[34mGenerated URL for file at key: qbyoifpj2jlo9iubqfplu1sv67u8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV0o1YjJsbWNHb3lhbXh2T1dsMVluRm1jR3gxTVhOMk5qZDFPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1aeWFYUmhjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyWnlhWFJoY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTI0VDIzOjI0OjM5LjM1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--41f1cca5db586c57f0032208f834f05ce0d02013/fritas.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22fritas.jpg%22%3B+filename%2A%3DUTF-8%27%27fritas.jpg)[0m
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: d3w3wnt0hl1r1sl49fh4p89imx7n (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRE4zTTNkdWREQm9iREZ5TVhOc05EbG1hRFJ3T0RscGJYZzNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KbGNtbHVhbVZzWVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkpsY21sdWFtVnNZUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MjQ6MzkuMzU3WiIsInB1ciI6ImJsb2Jfa2V5In19--388abcd6e635c3609c43fdbd18e1473a666cc5fd/berinjela.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22berinjela.jpg%22%3B+filename%2A%3DUTF-8%27%27berinjela.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV0o1YjJsbWNHb3lhbXh2T1dsMVluRm1jR3gxTVhOMk5qZDFPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1aeWFYUmhjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyWnlhWFJoY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTI0VDIzOjI0OjM5LjM1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--41f1cca5db586c57f0032208f834f05ce0d02013/fritas.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22fritas.jpg%22%3B+filename%2A%3DUTF-8%27%27fritas.jpg
+Completed 302 Found in 20ms (ActiveRecord: 0.2ms | Allocations: 4433)
+
+
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRE4zTTNkdWREQm9iREZ5TVhOc05EbG1hRFJ3T0RscGJYZzNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KbGNtbHVhbVZzWVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkpsY21sdWFtVnNZUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MjQ6MzkuMzU3WiIsInB1ciI6ImJsb2Jfa2V5In19--388abcd6e635c3609c43fdbd18e1473a666cc5fd/berinjela.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22berinjela.jpg%22%3B+filename%2A%3DUTF-8%27%27berinjela.jpg
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms | Allocations: 1826)
+
+
+Completed 302 Found in 15ms (ActiveRecord: 0.2ms | Allocations: 3083)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRE4zTTNkdWREQm9iREZ5TVhOc05EbG1hRFJ3T0RscGJYZzNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KbGNtbHVhbVZzWVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkpsY21sdWFtVnNZUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MjQ6MzkuMzU3WiIsInB1ciI6ImJsb2Jfa2V5In19--388abcd6e635c3609c43fdbd18e1473a666cc5fd/berinjela.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22berinjela.jpg%22%3B+filename%2A%3DUTF-8%27%27berinjela.jpg" for 127.0.0.1 at 2021-06-24 20:19:39 -0300
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV0o1YjJsbWNHb3lhbXh2T1dsMVluRm1jR3gxTVhOMk5qZDFPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1aeWFYUmhjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyWnlhWFJoY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTI0VDIzOjI0OjM5LjM1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--41f1cca5db586c57f0032208f834f05ce0d02013/fritas.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22fritas.jpg%22%3B+filename%2A%3DUTF-8%27%27fritas.jpg" for 127.0.0.1 at 2021-06-24 20:19:39 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"fritas.jpg\"; filename*=UTF-8''fritas.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV0o1YjJsbWNHb3lhbXh2T1dsMVluRm1jR3gxTVhOMk5qZDFPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1aeWFYUmhjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyWnlhWFJoY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTI0VDIzOjI0OjM5LjM1MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--41f1cca5db586c57f0032208f834f05ce0d02013", "filename"=>"fritas"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"berinjela.jpg\"; filename*=UTF-8''berinjela.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhaRE4zTTNkdWREQm9iREZ5TVhOc05EbG1hRFJ3T0RscGJYZzNiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KbGNtbHVhbVZzWVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkpsY21sdWFtVnNZUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MjQ6MzkuMzU3WiIsInB1ciI6ImJsb2Jfa2V5In19--388abcd6e635c3609c43fdbd18e1473a666cc5fd", "filename"=>"berinjela"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MjQ6MzkuMzQ0WiIsInB1ciI6ImJsb2Jfa2V5In19--ce8352a1ea3ad982bc10873be25d5f06ac569330/3.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%223.jpg%22%3B+filename%2A%3DUTF-8%27%273.jpg" for 127.0.0.1 at 2021-06-24 20:19:39 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"3.jpg\"; filename*=UTF-8''3.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjbWt5WjNCamVteG5hVzUxTlRsc2FERTVPRzgyTkRnM05UbG9OQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpNdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN6TG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMjEtMDYtMjRUMjM6MjQ6MzkuMzQ0WiIsInB1ciI6ImJsb2Jfa2V5In19--ce8352a1ea3ad982bc10873be25d5f06ac569330", "filename"=>"3"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d5e08d510d13b3b29324cefacaf31be955bd181/fritas.jpg" for 127.0.0.1 at 2021-06-24 20:19:41 -0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d5e08d510d13b3b29324cefacaf31be955bd181", "filename"=>"fritas"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: qbyoifpj2jlo9iubqfplu1sv67u8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV0o1YjJsbWNHb3lhbXh2T1dsMVluRm1jR3gxTVhOMk5qZDFPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1aeWFYUmhjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyWnlhWFJoY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTI0VDIzOjI0OjQxLjEyMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a2cb7142768f575bfe71e3473021cd50f6eaf393/fritas.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22fritas.jpg%22%3B+filename%2A%3DUTF-8%27%27fritas.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV0o1YjJsbWNHb3lhbXh2T1dsMVluRm1jR3gxTVhOMk5qZDFPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1aeWFYUmhjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyWnlhWFJoY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTI0VDIzOjI0OjQxLjEyMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a2cb7142768f575bfe71e3473021cd50f6eaf393/fritas.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22fritas.jpg%22%3B+filename%2A%3DUTF-8%27%27fritas.jpg
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms | Allocations: 1497)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV0o1YjJsbWNHb3lhbXh2T1dsMVluRm1jR3gxTVhOMk5qZDFPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1aeWFYUmhjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyWnlhWFJoY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTI0VDIzOjI0OjQxLjEyMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a2cb7142768f575bfe71e3473021cd50f6eaf393/fritas.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22fritas.jpg%22%3B+filename%2A%3DUTF-8%27%27fritas.jpg" for 127.0.0.1 at 2021-06-24 20:19:41 -0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"fritas.jpg\"; filename*=UTF-8''fritas.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjV0o1YjJsbWNHb3lhbXh2T1dsMVluRm1jR3gxTVhOMk5qZDFPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1aeWFYUmhjeTVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyWnlhWFJoY3k1cWNHY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIxLTA2LTI0VDIzOjI0OjQxLjEyMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a2cb7142768f575bfe71e3473021cd50f6eaf393", "filename"=>"fritas"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
